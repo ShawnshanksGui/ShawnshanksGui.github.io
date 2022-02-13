@@ -181,7 +181,7 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
-   interests:
+  interests:
     output: true
     permalink: /:collection/:path/ 
   portfolio:
