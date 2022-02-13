@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 I am a Ph.D. candidate in Department of Computer Science and Technology, Tsinghua University, advised by Prof. [Dan Li](https://nasp.cs.tsinghua.edu.cn/lidan.html). 
-My research interests lie primarily in computer networks, with a focus on appling Machine learning technologies to networking.
+My research interests lie primarily in computer networks, with a focus on appling machine learning technologies to networking.
 
 
 Education
