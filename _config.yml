@@ -181,6 +181,9 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
+   interests:
+    output: true
+    permalink: /:collection/:path/ 
   portfolio:
     output: true
     permalink: /:collection/:path/
@@ -231,6 +234,15 @@ defaults:
   - scope:
       path: ""
       type: portfolio
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+  # _interests
+  - scope:
+      path: ""
+      type: interests
     values:
       layout: single
       author_profile: true
