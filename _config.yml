@@ -181,6 +181,9 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
+  research:     
+    output: true     
+    permalink: /:collection/:path/     
   interests:
     output: true
     permalink: /:collection/:path/ 
@@ -240,6 +243,14 @@ defaults:
       share: true
       comment: true
   # _interests
+  - scope:
+      path: ""
+      type: research
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
   - scope:
       path: ""
       type: interests
