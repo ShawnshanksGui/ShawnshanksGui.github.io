@@ -5,7 +5,7 @@ permalink: /research/
 author_profile: true
 ---
 # Why research
-(十三邀)[] by 
+(许知远对话傅高义, 十三邀请)[https://movie.douban.com/subject/35173861/episode/11/] by Ezra Feivel Vogel and Zhiyuan Xu
 (学术作为一种志业)[https://book.douban.com/subject/30309618/] by Maximilian Karl Emil Weber
 
 
