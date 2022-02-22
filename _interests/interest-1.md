@@ -1,6 +1,6 @@
 ---
 title: "Reading"
-excerpt: "Fiction, philosophy, biography, <br/><img src='/images/lonely.jpg'>"
+excerpt: "Fiction, philosophy, biography, <br/><img src='/images/stoner41.jpg'>"
 collection: interests
 ---
 
