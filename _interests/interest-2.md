@@ -1,5 +1,5 @@
 ---
 title: "Tennis"
-excerpt: "NTRP rank 3.0-3.5 <br/><img src='/images/federa.jpg' width='55%'>"
+excerpt: "The 3.0+(NTRP rating) player <br/><img src='/images/federa.jpg' width='55%'>"
 collection: interests
 ---
