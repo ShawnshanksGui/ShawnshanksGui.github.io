@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 # Reading
-  [STONER](https://book.douban.com/subject/2965032/), by John Williams, my recent favorite book <br/><img src='/images/stoner41.jpg' width='55%'>
+  [STONER](https://book.douban.com/subject/2965032/), by John Williams, my new favorite book <br/><img src='/images/stoner41.jpg' width='55%'>
 
 <br/>
 
