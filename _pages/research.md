@@ -8,7 +8,7 @@ author_profile: true
 # Why research
   [许知远对话傅高义, 十三邀](https://movie.douban.com/subject/35173861/episode/11/) by Ezra Vogel and Zhiyuan Xu
 
-  [学术作为一种志业](https://book.douban.com/subject/30309618/) by Maximilian Weber
+  [学术作为一种志业](https://book.douban.com/subject/30309618/) by Max Weber
 
 <br/>
 
