@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 
-* **Incorporating intra-flow dependencies and inter-flow correlations for traffic matrix prediction**
+* **Incorporating intra-flow dependencies and inter-flow correlations for traffic matrix prediction**    
 Kaihui Gao, Dan Li, Li Chen, Jinkun Geng, **Fei Gui**, Yang Cheng, Yue Gu. 
 IWQOS 2020
 
