@@ -5,6 +5,10 @@ permalink: /publications/
 author_profile: true
 ---
 
+    
+* **Data-Driven Routing: A Typical Application of Digital Twin Network.**    
+Zhiyu Wei, Songtao Wang, Dan Li, **Fei Gui**, Sihong Hong.   
+International Conference on Digital Twins and Parallel Intelligence (DTPI) 2020 
 
 * **Incorporating intra-flow dependencies and inter-flow correlations for traffic matrix prediction.**    
 Kaihui Gao, Dan Li, Li Chen, Jinkun Geng, **Fei Gui**, Yang Cheng, Yue Gu. 
@@ -16,7 +20,7 @@ INFOCOM workshop 2020
 
 * **Sphinx: A Transport Protocol for High-Speed and Lossy Mobile Networks.**
 Junfeng Li, Dan Li, Wenfei Wu, K.K. Ramakrishnan and Jinkun Geng, **Fei Gui**, Fanzhao Wang, Kai Zheng.
-IPCCC 2019
+IPCCC 2019 (Best Paper Candidate)
 
 * **Dante: Enabling fov-aware adaptive fec coding for 360-degree video streaming.**
 Zhetao Li, **Fei Gui**, Jinkun Geng, Dan Li, Zhibo Wang, Junfeng Li, Yang Cheng, Usama Zafar.
