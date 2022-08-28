@@ -15,6 +15,8 @@ author_profile: true
 # How to do first-class research 
 * [You and Your research](https://www.cs.virginia.edu/~robins/YouAndYourResearch.pdf) by Richard W. Hamming
 
+* [Good Science](http://www.cs.cmu.edu/~hzhang/Newell.GoodScience) by Allen Newell
+
 * [The craft of research](http://course.sdu.edu.cn/G2S/eWebEditor/uploadfile/20140306165625006.pdf) by Wayne C. Booth 
 
 * [Research in spare time](https://yuandong-tian.com/research_in_spare_time.pdf) by Yuandong Tian
