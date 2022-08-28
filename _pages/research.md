@@ -12,7 +12,7 @@ author_profile: true
 
 <br/>
 
-# How to do first-class research 
+# How to do research 
 * [You and Your research](https://www.cs.virginia.edu/~robins/YouAndYourResearch.pdf) by Richard W. Hamming
 
 * [Good Science](http://www.cs.cmu.edu/~hzhang/Newell.GoodScience) by Allen Newell
