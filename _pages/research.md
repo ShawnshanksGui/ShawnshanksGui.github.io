@@ -24,6 +24,7 @@ author_profile: true
 <br/>
 
 # How to write paper
+* [Tips about writing systems papers](https://www.linzhong.org/opinions/writing.html) by Lin Zhong
 
 
 {% if author.googlescholar %}
