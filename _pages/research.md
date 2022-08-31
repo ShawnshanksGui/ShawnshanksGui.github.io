@@ -27,6 +27,9 @@ author_profile: true
 * [Tips about writing systems papers](https://www.linzhong.org/opinions/writing.html) by Lin Zhong
 
 
+# Some useful links
+* [Resources on Academia and Research](http://cs-www.cs.yale.edu/homes/yry/links/academia.html) by Richard Yang
+
 {% if author.googlescholar %}
   You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
 {% endif %}
