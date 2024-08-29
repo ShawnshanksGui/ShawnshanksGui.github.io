@@ -7,7 +7,7 @@ author_profile: true
 
 * **RedTE: Real-time and Distributed Traffic Engineering for Burst Mitigation in Wide Area Networks.**    
 **_Fei Gui_**, Songtao Wang, Dan Li, Li Chen, Kaihui Gao, Congcong Min, Yi Wang.
-ACM SIGCOMM 2024, Sydney, Australia. **(Top #1 Conference in Computer Networks)**
+[ACM SIGCOMM 2024](https://conferences.sigcomm.org/sigcomm/2024/), Sydney, Australia. **(Top #1 Conference in Computer Networks)**
 
 * **Data-Driven Routing: A Typical Application of Digital Twin Network.**    
 Zhiyu Wei, Songtao Wang, Dan Li, **_Fei Gui_**, Sihong Hong.   
