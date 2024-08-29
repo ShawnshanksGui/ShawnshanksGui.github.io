@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a 3th-year PhD student in Department of Computer Science and Technology, Tsinghua University, advised by Prof. [Dan Li](https://nasp.cs.tsinghua.edu.cn/lidan.html). 
+I am a 5th-year PhD student in Department of Computer Science and Technology, Tsinghua University, advised by Prof. [Dan Li](https://nasp.cs.tsinghua.edu.cn/lidan.html). 
 My research interests lie primarily in computer networks, with a focus on applying machine learning technologies to networking.
 
 
