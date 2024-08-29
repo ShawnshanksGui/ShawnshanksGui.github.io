@@ -8,9 +8,8 @@ redirect_from:
   - /about.html
 ---
 
-I am a 5th-year PhD student in Department of Computer Science and Technology, Tsinghua University, advised by Prof. [Dan Li](https://nasp.cs.tsinghua.edu.cn/lidan.html). 
-My research interests lie primarily in computer networks, with a focus on applying machine learning technologies to networking.
-
+I am a 5th-year PhD student in Department of Computer Science and Technology, Tsinghua University, advised by [Prof. Dan Li](https://nasp.cs.tsinghua.edu.cn/lidan.html). I am also collaborating closely with [Prof. Li Chen](https://li-ch.github.io/resume/) and [Dr. Kaihui Gao](https://gaokaihui.com/).
+My research interests lie primarily in networked systems, with a focus on applying machine learning technologies to networking. Currently, I am focusing on build up digital twins of LLM tranining sytems.
 
 Education
 ======
