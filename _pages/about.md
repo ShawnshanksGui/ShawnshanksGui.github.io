@@ -14,7 +14,7 @@ I received my B.S. in Automation and M.S in CS at Xiangtan University, fortunate
 
 <br>
 
-<h1><strong>Recent publications</strong></h1>
+<h1><strong>Recent Papers</strong></h1>
 
 * **“Accelerating Design Space Exploration for LLM Training Systems with Multi-experiment Parallel Simulation”.**
 **_Fei Gui_**, Kaihui Gao, Li Chen, Dan Li, Vincent Liu, Ran Zhang, Hongbing Yang, Dian Xiong, 
