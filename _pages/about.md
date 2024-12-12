@@ -16,15 +16,16 @@ I received my B.S. in Automation and M.S in CS at Xiangtan University, fortunate
 
 <h1><strong>News</strong></h1>
 
-* **Dec 2015 Multiverse accepted to NSDI'2025**
+* Dec 2015 Multiverse accepted to NSDI'2025
 
 
+<br>
 
 <h1><strong>Recent Papers</strong></h1>
 
-* **“Accelerating Design Space Exploration for LLM Training Systems with Multi-experiment Parallel Simulation”.**    
+<!-- * **“Accelerating Design Space Exploration for LLM Training Systems with Multi-experiment Parallel Simulation”.**    
 **_Fei Gui_**, Kaihui Gao, Li Chen, Dan Li, Vincent Liu, Ran Zhang, Hongbing Yang, Dian Xiong.   
-[USENIX NSDI 2025](https://www.usenix.org/conference/nsdi25). **(CCF A)**    
+[USENIX NSDI 2025](https://www.usenix.org/conference/nsdi25). **(CCF A)**     -->
 
 * **RedTE: Mitigating Subsecond Traffic Bursts with Real-time and Distributed Traffic Engineering.**    
 **_Fei Gui_**, Songtao Wang, Dan Li, Li Chen, Kaihui Gao, Congcong Min, Yi Wang.   
@@ -33,6 +34,7 @@ I received my B.S. in Automation and M.S in CS at Xiangtan University, fortunate
 
 <h1><strong>Services</strong></h1>
 
+* **IEEE Transactions on Mobile Communication, Reviewer, 2024.**
 
 <!-- * **Incorporating intra-flow dependencies and inter-flow correlations for traffic matrix prediction.**    
 Kaihui Gao, Dan Li, Li Chen, Jinkun Geng, **_Fei Gui_**, Yang Cheng, Yue Gu.   
