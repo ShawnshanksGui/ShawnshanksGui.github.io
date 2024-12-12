@@ -16,7 +16,7 @@ I received my B.S. in Automation and M.S in CS at Xiangtan University, fortunate
 
 <h1><strong>News</strong></h1>
 
-* Dec 2015 Multiverse accepted to NSDI'2025
+* **Dec 2015 Multiverse accepted to NSDI'2025**
 
 
 <br>
