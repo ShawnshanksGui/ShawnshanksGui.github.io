@@ -7,7 +7,7 @@ author_profile: true
 
 
 * **“Accelerating Design Space Exploration for LLM Training Systems with Multi-experiment Parallel Simulation”.**
-**_Fei Gui_**, Kaihui Gao, Li Chen, Dan Li, Vincent Liu, Ran Zhang, Hongbing Yang, Dian Xiong, 
+**_Fei Gui_**, Kaihui Gao, Li Chen, Dan Li, Vincent Liu, Ran Zhang, Hongbing Yang, Dian Xiong.   
 [USENIX NSDI 2025](https://www.usenix.org/conference/nsdi25). **(CCF A)**   
 
 * **RedTE: Mitigating Subsecond Traffic Bursts with Real-time and Distributed Traffic Engineering.**    
