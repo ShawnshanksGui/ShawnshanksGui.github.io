@@ -34,7 +34,7 @@ I received my B.S. in Automation and M.S in CS at Xiangtan University, fortunate
 
 <h1><strong>Services</strong></h1>
 
-* **IEEE Transactions on Mobile Communication, Reviewer, 2024.**
+* **Transactions on Mobile Computing, Reviewer, 2024.**
 
 <!-- * **Incorporating intra-flow dependencies and inter-flow correlations for traffic matrix prediction.**    
 Kaihui Gao, Dan Li, Li Chen, Jinkun Geng, **_Fei Gui_**, Yang Cheng, Yue Gu.   
