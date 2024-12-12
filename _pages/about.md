@@ -18,7 +18,7 @@ I received my B.S. in Automation and M.S in CS at Xiangtan University, fortunate
 
 * **“Accelerating Design Space Exploration for LLM Training Systems with Multi-experiment Parallel Simulation”.**
 **_Fei Gui_**, Kaihui Gao, Li Chen, Dan Li, Vincent Liu, Ran Zhang, Hongbing Yang, Dian Xiong.   
-[USENIX NSDI 2025](https://www.usenix.org/conference/nsdi25). **(CCF A)**   
+[USENIX NSDI 2025](https://www.usenix.org/conference/nsdi25). **(CCF A)**    
 
 * **RedTE: Mitigating Subsecond Traffic Bursts with Real-time and Distributed Traffic Engineering.**    
 **_Fei Gui_**, Songtao Wang, Dan Li, Li Chen, Kaihui Gao, Congcong Min, Yi Wang.   
