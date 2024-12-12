@@ -29,7 +29,7 @@ IEEE IPCCC 2019. **(CCF C, Best Paper Candidate)**
 
 * **Dante: Enabling fov-aware adaptive fec coding for 360-degree video streaming.**   
 Zhetao Li, **_Fei Gui_**, Jinkun Geng, Dan Li, Zhibo Wang, Junfeng Li, Yang Cheng, Usama Zafar.  
-ACM APNet 2018. **(CCF B)**  
+ACM APNet 2018. **(CCF C)**  
 
 
 {% if author.googlescholar %}
