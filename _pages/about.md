@@ -15,9 +15,14 @@ I received my B.S. in Automation and M.S in CS at Xiangtan University, fortunate
 <br>
 
 <h1><strong>Recent publications</strong></h1>
+
+* **“Accelerating Design Space Exploration for LLM Training Systems with Multi-experiment Parallel Simulation”.**
+**_Fei Gui_**, Kaihui Gao, Li Chen, Dan Li, Vincent Liu, Ran Zhang, Hongbing Yang, Dian Xiong, 
+[USENIX NSDI 2025](https://www.usenix.org/conference/nsdi25). **(CCF A)**   
+
 * **RedTE: Mitigating Subsecond Traffic Bursts with Real-time and Distributed Traffic Engineering.**    
 **_Fei Gui_**, Songtao Wang, Dan Li, Li Chen, Kaihui Gao, Congcong Min, Yi Wang.   
-[ACM SIGCOMM 2024](https://conferences.sigcomm.org/sigcomm/2024/). **(Top #1 Conference in Computer Networks)**    
+[ACM SIGCOMM 2024](https://conferences.sigcomm.org/sigcomm/2024/). **(CCF A)**    
 
 <!-- * **Incorporating intra-flow dependencies and inter-flow correlations for traffic matrix prediction.**    
 Kaihui Gao, Dan Li, Li Chen, Jinkun Geng, **_Fei Gui_**, Yang Cheng, Yue Gu.   
