@@ -15,7 +15,7 @@ Kaihui Gao, Dan Li, Li Chen, Jinkun Geng, <u>Fei Gui</u>, Yang Cheng, Yue Gu.
 **ACM IWQOS 2020. (CCF B)**  
 
 * Predicting traffic demand matrix by considering inter-flow correlations.   
-Kaihui Gao, Dan Li, Li Chen, Jinkun Geng, <u>Fei Gui<u>, Yang Cheng, Yue Gu.    
+Kaihui Gao, Dan Li, Li Chen, Jinkun Geng, <u>Fei Gui</u>, Yang Cheng, Yue Gu.    
 **IEEE INFOCOM workshop 2020.**   
 
 * Sphinx: A Transport Protocol for High-Speed and Lossy Mobile Networks.    
