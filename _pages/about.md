@@ -16,7 +16,8 @@ I received my B.S. in Automation and M.S. in CS at Xiangtan University, fortunat
 
 <h1><strong>News</strong></h1>
 
-* Dec 2015.  Multiverse accepted to **NSDI'2025**
+* [2024-12-11].  Multiverse accepted to **NSDI'2025**!
+* [2024-12-05].  Shadow PC member for **CoNEXT' 2025** 
 
 
 <br>
