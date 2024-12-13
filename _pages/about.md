@@ -28,7 +28,7 @@ I received my B.S. in Automation and M.S. in CS at Xiangtan University, fortunat
 [USENIX NSDI 2025](https://www.usenix.org/conference/nsdi25). **(CCF A)**     -->
 
 * RedTE: Mitigating Subsecond Traffic Bursts with Real-time and Distributed Traffic Engineering.    
-++Fei Gui++, Songtao Wang, Dan Li, Li Chen, Kaihui Gao, Congcong Min, Yi Wang.   
+<u>Fei Gui</u>, Songtao Wang, Dan Li, Li Chen, Kaihui Gao, Congcong Min, Yi Wang.   
 **ACM SIGCOMM 2024. (CCF A)**    
 
 
