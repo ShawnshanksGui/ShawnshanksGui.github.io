@@ -10,7 +10,7 @@ redirect_from:
 
 I am a 5th-year PhD student in Department of CS, Tsinghua University, fortunate to be advised by [Prof. Dan Li](https://nasp.cs.tsinghua.edu.cn/lidan.html). I am also collaborating closely with [Prof. Li Chen](https://li-ch.github.io/resume/) and [Dr. Kaihui Gao](https://gaokaihui.com/).
 My research interests lie primarily in networked systems, with a focus on applying machine learning technologies to networking. Currently, I am focusing on building up simulators for LLM training sytems.
-I received my B.S. in Automation and M.S in CS at Xiangtan University, fortunate to be advised by [Prof. Zhetao Li](https://faculty.jnu.edu.cn/xxkxjsxy/lzt3/list.htm).
+I received my B.S. in Automation and M.S. in CS at Xiangtan University, fortunate to be advised by [Prof. Zhetao Li](https://faculty.jnu.edu.cn/xxkxjsxy/lzt3/list.htm).
 
 <br>
 
@@ -27,9 +27,9 @@ I received my B.S. in Automation and M.S in CS at Xiangtan University, fortunate
 **_Fei Gui_**, Kaihui Gao, Li Chen, Dan Li, Vincent Liu, Ran Zhang, Hongbing Yang, Dian Xiong.   
 [USENIX NSDI 2025](https://www.usenix.org/conference/nsdi25). **(CCF A)**     -->
 
-* **RedTE: Mitigating Subsecond Traffic Bursts with Real-time and Distributed Traffic Engineering.**    
-**_Fei Gui_**, Songtao Wang, Dan Li, Li Chen, Kaihui Gao, Congcong Min, Yi Wang.   
-[ACM SIGCOMM 2024](https://conferences.sigcomm.org/sigcomm/2024/). **(CCF A)**    
+* RedTE: Mitigating Subsecond Traffic Bursts with Real-time and Distributed Traffic Engineering.    
+++Fei Gui++, Songtao Wang, Dan Li, Li Chen, Kaihui Gao, Congcong Min, Yi Wang.   
+**ACM SIGCOMM 2024. (CCF A)**    
 
 
 
