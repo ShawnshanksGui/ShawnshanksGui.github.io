@@ -12,12 +12,16 @@ I am a 5th-year PhD student in Department of CS, Tsinghua University, fortunate 
 My research interests lie primarily in networked systems, with a focus on applying machine learning technologies to networking. Currently, I am focusing on building up simulators for LLM training sytems.
 I received my B.S. in Automation and M.S. in CS at Xiangtan University, fortunate to be advised by [Prof. Zhetao Li](https://faculty.jnu.edu.cn/xxkxjsxy/lzt3/list.htm).
 
+
+
 <br>
 
 <h1><strong>News</strong></h1>
 
 * [2024-12-11].  Multiverse accepted to **NSDI' 2025!**
 * [2024-12-10].  Shadow PC member for **CoNEXT' 2025** 
+* [2024-05-04].  RedTE accepted to **SIGCOMM' 2024!**
+
 
 
 <br>
@@ -39,6 +43,8 @@ I received my B.S. in Automation and M.S. in CS at Xiangtan University, fortunat
 <h1><strong>Services</strong></h1>
 
 * **Transactions on Mobile Computing**, Reviewer, 2024.
+
+
 
 <!-- * **Incorporating intra-flow dependencies and inter-flow correlations for traffic matrix prediction.**    
 Kaihui Gao, Dan Li, Li Chen, Jinkun Geng, **_Fei Gui_**, Yang Cheng, Yue Gu.   
