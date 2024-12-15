@@ -15,9 +15,8 @@ I received my B.S. in Automation and M.S. in CS at Xiangtan University, fortunat
 
 
 <br>
-<!-- <span style="color:blue">这是**蓝色**的文字</span> -->
-<h1><strong><span style="color:blue">What's New</span></strong></h1>
-<!-- <h1><strong>News</strong></h1> -->
+<!-- <h1><strong><span style="color:blue">What's New</span></strong></h1> -->
+<h1><strong>What's New</strong></h1>
  <!-- <span style="color:blue">NSDI' 2025!</span> -->
 * **[2024-12-11]**.  Multiverse accepted to **NSDI' 2025!**
 * **[2024-12-10]**.  Shadow PC member for **CoNEXT' 2025** 
