@@ -12,7 +12,7 @@ I am a 5th-year PhD student in Department of CS, Tsinghua University, fortunate 
 My research interests lie primarily in networked systems, with a focus on applying machine learning technologies to networking. Currently, I am focusing on building up simulators for LLM training sytems.
 I received my B.S. in Automation and M.S. in CS at Xiangtan University, fortunate to be advised by [Prof. Zhetao Li](https://faculty.jnu.edu.cn/xxkxjsxy/lzt3/list.htm).
 
-
+***
 
 <br>
 <!-- <h1><strong><span style="color:blue">What's New</span></strong></h1> -->
@@ -22,7 +22,7 @@ I received my B.S. in Automation and M.S. in CS at Xiangtan University, fortunat
 * **[2024-12-10]**.  Shadow PC member for **CoNEXT' 2025** 
 * **[2024-05-04]**.  RedTE accepted to **SIGCOMM' 2024!**
 
-
+***
 
 <br>
 
