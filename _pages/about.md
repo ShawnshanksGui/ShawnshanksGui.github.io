@@ -17,8 +17,9 @@ I received my B.S. in Automation and M.S. in CS at Xiangtan University, fortunat
 
 <br>
 <!-- <h1><strong><span style="color:blue">What's New</span></strong></h1> -->
-<h1><strong>What's New</strong></h1>
- <!-- <span style="color:blue">NSDI' 2025!</span> -->
+<!-- <h1><strong>What's New</strong></h1> -->
+<h1><strong><span style="color:#1E90FF">**What's New**</span></strong></h1>
+
 * **[2024-12-11]**.  Multiverse accepted to **NSDI' 2025!**
 * **[2024-12-10]**.  Shadow PC member for **CoNEXT' 2025** 
 * **[2024-05-04]**.  RedTE accepted to **SIGCOMM' 2024!**
