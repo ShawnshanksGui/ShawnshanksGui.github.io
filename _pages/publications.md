@@ -5,8 +5,8 @@ permalink: /publications/
 author_profile: true
 ---
 
-
-* [<span style="color:blue">**SIGCOMM'24**</span>] RedTE: Mitigating Subsecond Traffic Bursts with Real-time and Distributed Traffic Engineering.    
+<!-- #1E90FF; -->
+* [<span style="color:#1E90FF">**SIGCOMM'24**</span>] RedTE: Mitigating Subsecond Traffic Bursts with Real-time and Distributed Traffic Engineering.    
 <u>Fei Gui</u>, Songtao Wang, Dan Li, Li Chen, Kaihui Gao, Congcong Min, Yi Wang.   
 <!-- **ACM SIGCOMM 2024. (Top Conference in Computer Networks)**     -->
 
