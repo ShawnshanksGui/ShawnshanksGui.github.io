@@ -29,8 +29,8 @@ I received my B.S. in Automation and M.S. in CS at Xiangtan University, fortunat
 
 <br>
 
-<!-- <h1><strong>Selected Papers</strong></h1> -->
-<h1><strong><span style="color:#1E90FF">Selected Papers</span></strong></h1>
+<h1><strong>Selected Papers</strong></h1>
+
 <!-- * **“Accelerating Design Space Exploration for LLM Training Systems with Multi-experiment Parallel Simulation”.**    
 **_Fei Gui_**, Kaihui Gao, Li Chen, Dan Li, Vincent Liu, Ran Zhang, Hongbing Yang, Dian Xiong.   
 [USENIX NSDI 2025](https://www.usenix.org/conference/nsdi25). **(CCF A)**     -->
@@ -46,8 +46,8 @@ I received my B.S. in Automation and M.S. in CS at Xiangtan University, fortunat
 
 <br>
 
-<!-- <h1><strong>Services</strong></h1> -->
-<h1><strong><span style="color:#1E90FF">Services</span></strong></h1>
+<h1><strong>Services</strong></h1>
+
 * **Transactions on Mobile Computing**, Reviewer, 2024.
 
 
