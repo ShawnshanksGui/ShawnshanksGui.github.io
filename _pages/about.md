@@ -34,10 +34,12 @@ I received my B.S. in Automation and M.S. in CS at Xiangtan University, fortunat
 **_Fei Gui_**, Kaihui Gao, Li Chen, Dan Li, Vincent Liu, Ran Zhang, Hongbing Yang, Dian Xiong.   
 [USENIX NSDI 2025](https://www.usenix.org/conference/nsdi25). **(CCF A)**     -->
 
-* RedTE: Mitigating Subsecond Traffic Bursts with Real-time and Distributed Traffic Engineering.    
+<!-- * RedTE: Mitigating Subsecond Traffic Bursts with Real-time and Distributed Traffic Engineering.    
 <u>Fei Gui</u>, Songtao Wang, Dan Li, Li Chen, Kaihui Gao, Congcong Min, Yi Wang.   
-**ACM SIGCOMM 2024. (Top Conference in Computer Networks)**    
+**ACM SIGCOMM 2024. (Top Conference in Computer Networks)**     -->
 
+* [**SIGCOMM'24**] RedTE: Mitigating Subsecond Traffic Bursts with Real-time and Distributed Traffic Engineering.    
+<u>Fei Gui</u>, Songtao Wang, Dan Li, Li Chen, Kaihui Gao, Congcong Min, Yi Wang.   
 
 ***
 
