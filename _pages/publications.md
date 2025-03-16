@@ -5,8 +5,11 @@ permalink: /publications/
 author_profile: true
 ---
 
-<!-- #1E90FF; -->
-* [<span style="color:#1E90FF">**SIGCOMM'24**</span>] RedTE: Mitigating Subsecond Traffic Bursts with Real-time and Distributed Traffic Engineering.    
+
+* [**NSDI'25**] Accelerating Design Space Exploration for LLM Training Systems with Multi-experiment Parallel Simulation.
+<u>Fei Gui</u>, Kaihui Gao, Li Chen, Dan Li, Vincent Liu, Ran Zhang, Hongbing Yang, Dian Xiong.
+
+* [**SIGCOMM'24**] RedTE: Mitigating Subsecond Traffic Bursts with Real-time and Distributed Traffic Engineering.    
 <u>Fei Gui</u>, Songtao Wang, Dan Li, Li Chen, Kaihui Gao, Congcong Min, Yi Wang.   
 <!-- **ACM SIGCOMM 2024. (Top Conference in Computer Networks)**     -->
 
