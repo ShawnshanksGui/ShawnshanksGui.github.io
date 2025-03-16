@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 
-* [**NSDI'25**] Accelerating Design Space Exploration for LLM Training Systems with Multi-experiment Parallel Simulation.
+* [**NSDI'25**] Accelerating Design Space Exploration for LLM Training Systems with Multi-experiment Parallel Simulation.    
 <u>Fei Gui</u>, Kaihui Gao, Li Chen, Dan Li, Vincent Liu, Ran Zhang, Hongbing Yang, Dian Xiong.
 
 * [**SIGCOMM'24**] RedTE: Mitigating Subsecond Traffic Bursts with Real-time and Distributed Traffic Engineering.    
