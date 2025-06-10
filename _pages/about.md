@@ -54,7 +54,7 @@ I received my B.S. in Automation and M.S. in CS at Xiangtan University, fortunat
 
 * **USENIX FAST**, Artifacts Evaluation PC member, 2026.
 * **ACM CoNEXT**, Shadow TPC member, 2025.
-* **Transactions on Mobile Computing**, Reviewer, 2024.
+* **IEEE TMC**, Reviewer, 2024.
 
 
 
