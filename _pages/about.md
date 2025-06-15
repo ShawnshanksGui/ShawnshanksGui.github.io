@@ -22,7 +22,7 @@ Previously, I received my B.S. in Automation and M.S. in Computer Science, respe
 * **[2025-5-18]**.  AEC member for **FAST' 2026!**
 * **[2024-12-11]**.  Multiverse accepted to **NSDI' 2025!**
 * **[2024-12-10]**.  Shadow PC member for **CoNEXT' 2025!** 
-* **[2024-05-04]**.  RedTE accepted to **SIGCOMM' 2024!**
+* **[2024-5-04]**.  RedTE accepted to **SIGCOMM' 2024!**
 
 
 ***
