@@ -55,7 +55,7 @@ Previously, I received my B.S. in Automation and M.S. in Computer Science, respe
 
 <h1><strong>Services</strong></h1>
 
-* **ACM ASPLOS 2026, USENIX FAST 2026, IEEE MICRO 2025**, Artifact Evaluation TPC member.
+* **ACM ASPLOS 2026, ACM SOSP 2025, IEEE MICRO 2025**, Artifact Evaluation TPC member.
 * **ACM Eurosys 2026, ACM CoNEXT 2025**, Shadow TPC member.
 * **IEEE TMC 2024**, Reviewer.
 
