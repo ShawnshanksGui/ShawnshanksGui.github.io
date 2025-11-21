@@ -8,10 +8,11 @@ redirect_from:
   - /about.html
 ---
 
-I am a fifth-year Ph.D. student in the Department of Computer Science and Technology, Tsinghua University, fortunate to be advised by [Prof. Dan Li](https://nasp.cs.tsinghua.edu.cn/lidan.html). I am also collaborating closely with [Prof. Li Chen](https://li-ch.github.io/resume/) and [Dr. Kaihui Gao](https://gaokaihui.com/).
-My research interests lie primarily in AI for networking and AI infra. Currently, I am focusing on building up simulators for LLM training sytems. To date, I have published two first-author papers in top-tier computer network venues, including USENIX NSDI and ACM SIGCOMM.
+Fei Gui received a Ph.D. degree from the Department of Computer Science and Technology, Tsinghua University, fortunate to be advised by [Prof. Dan Li](https://nasp.cs.tsinghua.edu.cn/lidan.html). I am also collaborating closely with [Prof. Li Chen](https://li-ch.github.io/resume/) and [Dr. Kaihui Gao](https://gaokaihui.com/).
+My research interests lie primarily in AI for networking and AI infra. Currently, I am focusing on building up simulators for LLM training and inference sytems. To date, I have published two first-author papers in top-tier computer network venues, including USENIX NSDI and ACM SIGCOMM.
+<!-- 
 Previously, I received my B.S. in Automation and M.S. in Computer Science, respectively, from Xiangtan University, where I was fortunate to be advised by [Prof. Zhetao Li](https://faculty.jnu.edu.cn/xxkxjsxy/lzt3/list.htm).
-
+ -->
 
 ***
 
@@ -19,13 +20,22 @@ Previously, I received my B.S. in Automation and M.S. in Computer Science, respe
 <!-- <h1><strong><span style="color:blue">What's New</span></strong></h1> -->
 <h1><strong>What's New</strong></h1>
 <!-- <h1><strong><span style="color:#1E90FF">What's New</span></strong></h1> -->
-* [2025-07-09].  AEC member for **MICRO' 2025 and ASPLOS' 2025.**
+* [2025-11].  I passed my thesis defense!**
+* [2025-08].  AEC member for **SOSP' 2025.**
+* [2025-07].  AEC member for **MICRO' 2025 and ASPLOS' 2025.**
+* [2025-06].  Shadow PC member for **Eurosys' 2026.**
+* [2025-01].  Multiverse is now [open-source](https://github.com/NASP-THU/multiverse)!
+* [2024-12].  Multiverse accepted to **NSDI' 2025!**
+* [2024-12].  Shadow PC member for **CoNEXT' 2025.** 
+* [2024-05].  RedTE accepted to **SIGCOMM' 2024!**
+
+<!-- * [2025-07-09].  AEC member for **MICRO' 2025 and ASPLOS' 2025.**
 * [2025-06-21].  Shadow PC member for **Eurosys' 2026.**
 * [2025-05-18].  AEC member for **FAST' 2026.**
 * [2025-01-03].  Multiverse is now [open-source](https://github.com/NASP-THU/multiverse)!
 * [2024-12-11].  Multiverse accepted to **NSDI' 2025!**
 * [2024-12-10].  Shadow PC member for **CoNEXT' 2025.** 
-* [2024-05-04].  RedTE accepted to **SIGCOMM' 2024!**
+* [2024-05-04].  RedTE accepted to **SIGCOMM' 2024!** -->
 
 
 ***
