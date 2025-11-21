@@ -20,7 +20,7 @@ Previously, I received my B.S. in Automation and M.S. in Computer Science, respe
 <!-- <h1><strong><span style="color:blue">What's New</span></strong></h1> -->
 <h1><strong>What's New</strong></h1>
 <!-- <h1><strong><span style="color:#1E90FF">What's New</span></strong></h1> -->
-* [2025-11].  I passed my thesis defense!**
+* [2025-11].  I passed my **dissertation defense!!!**
 * [2025-08].  AEC member for **SOSP' 2025.**
 * [2025-07].  AEC member for **MICRO' 2025 and ASPLOS' 2025.**
 * [2025-06].  Shadow PC member for **Eurosys' 2026.**
