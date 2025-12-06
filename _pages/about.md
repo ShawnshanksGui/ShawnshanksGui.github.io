@@ -20,9 +20,10 @@ Previously, I received my B.S. in Automation and M.S. in Computer Science, respe
 <!-- <h1><strong><span style="color:blue">What's New</span></strong></h1> -->
 <h1><strong>What's New</strong></h1>
 <!-- <h1><strong><span style="color:#1E90FF">What's New</span></strong></h1> -->
+* [2025-12].  AEC member for **NSDI' 2026.**
 * [2025-11].  I passed my **dissertation defense!**
 * [2025-08].  AEC member for **SOSP' 2025.**
-* [2025-07].  AEC member for **MICRO' 2025 and ASPLOS' 2025.**
+* [2025-07].  AEC member for **ASPLOS' 2025.**
 * [2025-06].  Shadow PC member for **Eurosys' 2026.**
 * [2025-01].  Multiverse is now [open-source](https://github.com/NASP-THU/multiverse)!
 * [2024-12].  Multiverse accepted to **NSDI' 2025!**
@@ -66,7 +67,7 @@ Previously, I received my B.S. in Automation and M.S. in Computer Science, respe
 <h1><strong>Services</strong></h1>
 
 * Shadow TPC member: **ACM Eurosys 2026, ACM CoNEXT 2025**.
-* Artifact Evaluation TPC member: **ACM ASPLOS 2026, ACM SOSP 2025, IEEE MICRO 2025**.
+* Artifact Evaluation TPC member: **USENIX NSDI' 2026, ACM ASPLOS 2026, ACM SOSP 2025, IEEE MICRO 2025**.
 * Reviewer: **IEEE TMC 2024**.
 
 
