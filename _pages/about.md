@@ -24,10 +24,10 @@ Previously, I received my B.S. in Automation and M.S. in Computer Science, respe
 * [2025-11].  I passed my **dissertation defense!**
 * [2025-08].  AEC member for **SOSP' 2025.**
 * [2025-07].  AEC member for **ASPLOS' 2025.**
-* [2025-06].  Shadow PC member for **Eurosys' 2026.**
+* [2025-06].  Shadow TPC member for **Eurosys' 2026.**
 * [2025-01].  Multiverse is now [open-source](https://github.com/NASP-THU/multiverse)!
 * [2024-12].  Multiverse accepted to **NSDI' 2025!**
-* [2024-12].  Shadow PC member for **CoNEXT' 2025.** 
+* [2024-12].  Shadow TPC member for **CoNEXT' 2025.** 
 * [2024-05].  RedTE accepted to **SIGCOMM' 2024!**
 
 <!-- * [2025-07-09].  AEC member for **MICRO' 2025 and ASPLOS' 2025.**
