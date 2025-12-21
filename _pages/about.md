@@ -20,6 +20,7 @@ Previously, I received my B.S. in Automation and M.S. in Computer Science, respe
 <!-- <h1><strong><span style="color:blue">What's New</span></strong></h1> -->
 <h1><strong>What's New</strong></h1>
 <!-- <h1><strong><span style="color:#1E90FF">What's New</span></strong></h1> -->
+* [2025-12].  TPC member for "SIGCOMM' 2026".
 * [2025-12].  Wormhole accpeted to **NSDI' 2026**. Congratulations to Fei Long.
 * [2025-12].  AEC member for **NSDI' 2026.**
 * [2025-11].  I passed my **dissertation defense!**
@@ -66,7 +67,7 @@ Previously, I received my B.S. in Automation and M.S. in Computer Science, respe
 <br>
 
 <h1><strong>Services</strong></h1>
-
+* TPC member: **ACM SIGCOMM 2026**.
 * Shadow TPC member: **ACM EuroSys 2026, ACM CoNEXT 2025**.
 * Artifact Evaluation TPC member: **USENIX NSDI' 2026, ACM ASPLOS 2026, ACM SOSP 2025, IEEE MICRO 2025**.
 * Reviewer: **IEEE TMC 2024**.
