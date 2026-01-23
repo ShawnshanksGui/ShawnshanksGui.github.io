@@ -8,8 +8,10 @@ redirect_from:
   - /about.html
 ---
 
-I received a Ph.D. degree from the Department of Computer Science and Technology, Tsinghua University, fortunate to be advised by [Prof. Dan Li](https://nasp.cs.tsinghua.edu.cn/lidan.html). I am also collaborating closely with [Prof. Li Chen](https://li-ch.github.io/resume/) and [Dr. Kaihui Gao](https://gaokaihui.com/).
-My research interests lie primarily in AI for networking and AI infra. Currently, I am focusing on building up simulators for LLM training and inference sytems. To date, I have published two first-author papers in top-tier computer network venues, including USENIX NSDI and ACM SIGCOMM.
+I am currently an Assistant Researcher at Zhongguancun Laboratory, collaborating closely with [Dr. Kaihui Gao](https://gaokaihui.com/), [Prof. Li Chen](https://li-ch.github.io/resume/), and [Prof. Dan Li](https://nasp.cs.tsinghua.edu.cn/lidan.html).
+I received a Ph.D. degree from the Department of Computer Science and Technology, Tsinghua University, in 2025, where I was fortunate to be advised by [Prof. Dan Li](https://nasp.cs.tsinghua.edu.cn/lidan.html). 
+
+My research interests lie primarily in AI for networking and AI infra. Currently, I am focusing on building up simulators for LLM training and inference sytems. To date, I have published two first-author papers in top-tier computer network venues, including USENIX NSDI and ACM SIGCOMM. 
 <!-- 
 Previously, I received my B.S. in Automation and M.S. in Computer Science, respectively, from Xiangtan University, where I was fortunate to be advised by [Prof. Zhetao Li](https://faculty.jnu.edu.cn/xxkxjsxy/lzt3/list.htm).
  -->
@@ -25,11 +27,11 @@ Previously, I received my B.S. in Automation and M.S. in Computer Science, respe
 * [2025-12].  AEC member for **NSDI' 2026.**
 * [2025-11].  I passed my **dissertation defense!**
 * [2025-08].  AEC member for **SOSP' 2025.**
-* [2025-07].  AEC member for **ASPLOS' 2025.**
+<!-- * [2025-07].  AEC member for **ASPLOS' 2025.** -->
 * [2025-06].  Shadow TPC member for **Eurosys' 2026.**
 * [2025-01].  Multiverse is now [open-source](https://github.com/NASP-THU/multiverse)!
 * [2024-12].  Multiverse accepted to **NSDI' 2025!**
-* [2024-12].  Shadow TPC member for **CoNEXT' 2025.** 
+<!-- * [2024-12].  Shadow TPC member for **CoNEXT' 2025.**  -->
 * [2024-05].  RedTE accepted to **SIGCOMM' 2024!**
 
 <!-- * [2025-07-09].  AEC member for **MICRO' 2025 and ASPLOS' 2025.**
@@ -68,9 +70,13 @@ Previously, I received my B.S. in Automation and M.S. in Computer Science, respe
 
 <h1><strong>Services</strong></h1>
 * TPC member: **ACM SIGCOMM 2026**.
-* Shadow TPC member: **ACM EuroSys 2026, ACM CoNEXT 2025**.
+<!-- * Shadow TPC member: **ACM EuroSys 2026, ACM CoNEXT 2025**. -->
 * Artifact Evaluation TPC member: **USENIX NSDI' 2026, ACM ASPLOS 2026, ACM SOSP 2025, IEEE MICRO 2025**.
 * Reviewer: **IEEE TMC 2024**.
+
+
+<!-- <h1><strong>Selected Honors and Awards</strong></h1>
+* ZhongShiMo Scholarship Finalist, DCST, Tsinghua University -->
 
 
 
