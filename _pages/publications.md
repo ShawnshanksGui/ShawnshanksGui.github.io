@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 
-[**NSDI'26**] Supercharging Packet-level Network Simulation of Large Model Training via Memoization and Fast-Forwarding.     
+* [**NSDI'26**] Supercharging Packet-level Network Simulation of Large Model Training via Memoization and Fast-Forwarding.     
 <u>Fei Long</u>, Kaihui Gao, Li Chen, Dan Li, Yiwei Zhang, <u>Fei Gui</u>, Yitao Xing, Wenjia Wei, Bingyang Liu. (Top Conference in Computer Networks)
 
 * [**NSDI'25**] Accelerating Design Space Exploration for LLM Training Systems with Multi-experiment Parallel Simulation.     
