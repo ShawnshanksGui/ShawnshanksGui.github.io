@@ -6,12 +6,14 @@ author_profile: true
 ---
 
 
+[**NSDI'26**] Supercharging Packet-level Network Simulation of Large Model Training via Memoization and Fast-Forwarding.     
+<u>Fei Long</u>, Kaihui Gao, Li Chen, Dan Li, Yiwei Zhang, <u>Fei Gui</u>, Yitao Xing, Wenjia Wei, Bingyang Liu. (Top Conference in Computer Networks)
 
 * [**NSDI'25**] Accelerating Design Space Exploration for LLM Training Systems with Multi-experiment Parallel Simulation.     
-<u>Fei Gui</u>, Kaihui Gao, Li Chen, Dan Li, Vincent Liu, Ran Zhang, Hongbing Yang, Dian Xiong.
+<u>Fei Gui</u>, Kaihui Gao, Li Chen, Dan Li, Vincent Liu, Ran Zhang, Hongbing Yang, Dian Xiong. (Top Conference in Computer Networks)
 
 * [**SIGCOMM'24**] RedTE: Mitigating Subsecond Traffic Bursts with Real-time and Distributed Traffic Engineering.    
-<u>Fei Gui</u>, Songtao Wang, Dan Li, Li Chen, Kaihui Gao, Congcong Min, Yi Wang.   
+<u>Fei Gui</u>, Songtao Wang, Dan Li, Li Chen, Kaihui Gao, Congcong Min, Yi Wang. (Top Conference in Computer Networks)
 <!-- **ACM SIGCOMM 2024. (Top Conference in Computer Networks)**     -->
 
 * [**IWQoS'20**] Incorporating intra-flow dependencies and inter-flow correlations for traffic matrix prediction.   
