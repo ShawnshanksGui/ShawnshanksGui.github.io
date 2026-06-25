@@ -74,7 +74,7 @@ Fei Long, Kaihui Gao\*, Li Chen\*, Dan Li, Yiwei Zhang, <u>Fei Gui</u>, Yitao Xi
 * TPC member: **ACM SIGCOMM 2026**, **IEEE ICNP 2026**, **IEEE INFOCOM 2027**.
 <!-- * Shadow TPC member: **ACM EuroSys 2026, ACM CoNEXT 2025**. -->
 * Artifact Evaluation TPC member: **USENIX NSDI 2026**, **ACM ASPLOS 2026**, **ACM SOSP 2025**.
-* Reviewer: **IEEE TMC 2024**.
+* Reviewer: **IEEE TMC 2024**, **IEEE JSAC 2026**.
 
 ***
 
@@ -83,7 +83,8 @@ Fei Long, Kaihui Gao\*, Li Chen\*, Dan Li, Yiwei Zhang, <u>Fei Gui</u>, Yitao Xi
 <h1><strong>Honors and Awards</strong></h1>
 * Outstanding Ph.D. Graduate, Tsinghua University
 
-* ZhongShiMo Scholarship Finalist, DCST, Tsinghua University
+* ZhongShiMo Scholarship Finalist (The best honor for graduates in the Department of Computer Science, Tsinghua University)
+
 
 
 
