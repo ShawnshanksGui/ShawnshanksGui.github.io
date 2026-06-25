@@ -77,7 +77,7 @@ Fei Long, Kaihui Gao\*, Li Chen\*, Dan Li, Yiwei Zhang, <u>Fei Gui</u>, Yitao Xi
 * Reviewer: **IEEE TMC 2024**.
 
 
-<h1><strong>Selected Honors and Awards</strong></h1>
+<h1><strong>Honors and Awards</strong></h1>
 * Outstanding Ph.D. Graduate, Tsinghua University
 * ZhongShiMo Scholarship Finalist, DCST, Tsinghua University
 
