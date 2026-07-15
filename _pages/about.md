@@ -60,7 +60,7 @@ Previously, I received my B.S. in Automation and M.S. in Computer Science, respe
 
 
 * [**SIGCOMM'26**] PReCCL: Performant and Resilient Collective Communication via Integrated Inband Telemetry and Workload Reallocation.    
- Zhiyong Chen, Kaihui Gao, Li Chen, Rui Yan, Zihan Yan, <u>Fei Gui</u>, Dan Li, Jiamin Cao, Jiaqi Gao. (Top Conference in Computer Networks, CCF A)
+ Zhiyong Chen, Kaihui Gao\*, Li Chen\*, Rui Yan, Zihan Yan, <u>Fei Gui</u>, Dan Li, Jiamin Cao, Jiaqi Gao. (Top Conference in Computer Networks, CCF A)
 
 * [**NSDI'26**] Supercharging Packet-level Network Simulation of Large Model Training via Memoization and Fast-Forwarding.     
 Fei Long, Kaihui Gao\*, Li Chen\*, Dan Li, Yiwei Zhang, <u>Fei Gui</u>, Yitao Xing, Wenjia Wei, Bingyang Liu. (Top Conference in Computer Networks, CCF A)
