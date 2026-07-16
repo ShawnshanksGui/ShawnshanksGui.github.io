@@ -22,9 +22,11 @@ Previously, I received my B.S. in Automation and M.S. in Computer Science, respe
 <!-- <h1><strong><span style="color:blue">What's New</span></strong></h1> -->
 <h1><strong>What's New</strong></h1>
 <!-- <h1><strong><span style="color:#1E90FF">What's New</span></strong></h1> -->
-* [2026-06].  PReCCL accpeted to **SIGCOMM' 2026**. Congratulations to Zhiyong Chen.
+* [2026-06].  PReCCL accepted to **SIGCOMM' 2026**. Congratulations to Zhiyong Chen.
+* [2026-05].  TPC member for IEEE INFOCOM 2027.
+* [2026-05].  TPC member for IEEE ICNP 2026.
 * [2025-12].  TPC member for **SIGCOMM' 2026**.
-* [2025-12].  Wormhole accpeted to **NSDI' 2026**. Congratulations to Fei Long.
+* [2025-12].  Wormhole accepted to **NSDI' 2026**. Congratulations to Fei Long.
 * [2025-12].  AEC member for **NSDI' 2026.**
 * [2025-11].  I passed my **dissertation defense!**
 * [2025-08].  AEC member for **SOSP' 2025.**
