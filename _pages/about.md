@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 I am currently an Assistant Researcher at Zhongguancun Laboratory, collaborating closely with [Dr. Kaihui Gao](https://gaokaihui.com/) and [Prof. Li Chen](https://li-ch.github.io/resume/).
-I received a Ph.D. degree from the Department of Computer Science and Technology, Tsinghua University, in 2025, where I was fortunate to be advised by [Prof. Dan Li](https://nasp.cs.tsinghua.edu.cn/lidan.html). 
+I received a Ph.D. degree, with High Honors, from Tsinghua University, in 2025, where I was fortunate to be advised by [Prof. Dan Li](https://nasp.cs.tsinghua.edu.cn/lidan.html). 
 
 My research interests lie primarily in networking systems. Currently, I am focusing on building up simulators for LLM training and inference systems. To date, I have published several papers in top-tier computer network venues, including USENIX NSDI and ACM SIGCOMM. 
 <!-- 
@@ -28,7 +28,7 @@ Previously, I received my B.S. in Automation and M.S. in Computer Science, respe
 * [2025-12].  Wormhole accepted to **NSDI 2026**. Congratulations to Fei Long.
 * [2025-12].  AEC member for **NSDI 2026.**
 * [2025-11].  I passed my **dissertation defense!**
-* [2025-08].  AEC member for **SOSP 2025**.
+<!-- * [2025-08].  AEC member for **SOSP 2025**. -->
 <!-- * [2025-07].  AEC member for ASPLOS 2025. -->
 * [2025-06].  Shadow TPC member for Eurosys 2026.
 * [2025-01].  Multiverse is now [open-source](https://github.com/NASP-THU/multiverse)!
