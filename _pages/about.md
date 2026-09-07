@@ -51,17 +51,19 @@ Previously, I received my B.S. in Automation and M.S. in Computer Science, respe
 **ACM SIGCOMM 2024. (Top Conference in Computer Networks)**     -->
 
 
-* [**SIGCOMM'26**] PReCCL: Performant and Resilient Collective Communication via Integrated Inband Telemetry and Workload Reallocation.    
- Zhiyong Chen, Kaihui Gao\*, Li Chen\*, Rui Yan, Zihan Yan, <u>Fei Gui</u>, Dan Li, Jiamin Cao, Jiaqi Gao. (Top Conference in Computer Networks, CCF A)
-
-* [**NSDI'26**] Supercharging Packet-level Network Simulation of Large Model Training via Memoization and Fast-Forwarding.     
-Fei Long, Kaihui Gao\*, Li Chen\*, Dan Li, Yiwei Zhang, <u>Fei Gui</u>, Yitao Xing, Wenjia Wei, Bingyang Liu. (Top Conference in Computer Networks, CCF A)
 
 * [**NSDI'25**] Accelerating Design Space Exploration for LLM Training Systems with Multi-experiment Parallel Simulation.     
 <u>Fei Gui</u>, Kaihui Gao\*, Li Chen\*, Dan Li, Vincent Liu, Ran Zhang, Hongbing Yang, Dian Xiong. (Top Conference in Computer Networks, CCF A)
 
 * [**SIGCOMM'24**] RedTE: Mitigating Subsecond Traffic Bursts with Real-time and Distributed Traffic Engineering.    
 <u>Fei Gui</u>, Songtao Wang, Dan Li\*, Li Chen, Kaihui Gao, Congcong Min, Yi Wang. (Top Conference in Computer Networks, CCF A)
+
+* [**SIGCOMM'26**] PReCCL: Performant and Resilient Collective Communication via Integrated Inband Telemetry and Workload Reallocation.    
+ Zhiyong Chen, Kaihui Gao\*, Li Chen\*, Rui Yan, Zihan Yan, <u>Fei Gui</u>, Dan Li, Jiamin Cao, Jiaqi Gao. (Top Conference in Computer Networks, CCF A)
+
+* [**NSDI'26**] Supercharging Packet-level Network Simulation of Large Model Training via Memoization and Fast-Forwarding.     
+Fei Long, Kaihui Gao\*, Li Chen\*, Dan Li, Yiwei Zhang, <u>Fei Gui</u>, Yitao Xing, Wenjia Wei, Bingyang Liu. (Top Conference in Computer Networks, CCF A)
+
 
 ***
 
