@@ -80,6 +80,8 @@ Fei Long, Kaihui Gao\*, Li Chen\*, Dan Li, Yiwei Zhang, <u>Fei Gui</u>, Yitao Xi
 <br>
 
 <h1><strong>Honors and Awards</strong></h1>
+* Doctoral Dissertation Award, ACM SIGCOMM China
+
 * Outstanding Ph.D. Graduate, Tsinghua University
 
 * ZhongShiMo Scholarship Finalist (The best honor for graduates in the Department of Computer Science, Tsinghua University)
