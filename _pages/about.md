@@ -80,7 +80,7 @@ Fei Long, Kaihui Gao\*, Li Chen\*, Dan Li, Yiwei Zhang, <u>Fei Gui</u>, Yitao Xi
 <br>
 
 <h1><strong>Honors and Awards</strong></h1>
-* Outstanding Doctoral Dissertation Award, ACM SIGCOMM China
+* ACM SIGCOMM China Doctoral Dissertation Award 
 
 * Outstanding Ph.D. Graduate, Tsinghua University
 
