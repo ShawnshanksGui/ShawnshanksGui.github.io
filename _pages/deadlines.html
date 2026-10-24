@@ -1,0 +1,168 @@
+---
+permalink: /deadlines/
+title: "Systems Conference Deadlines"
+excerpt: "Official submission deadlines and TPC self-nomination notices."
+author_profile: true
+---
+
+{% assign monitor = site.data.conference_deadlines %}
+
+<div class="deadline-monitor">
+  <header class="deadline-monitor__header">
+    <p class="deadline-monitor__eyebrow">Daily official-source monitor</p>
+    <p class="deadline-monitor__intro">
+      Submission deadlines and TPC self-nomination notices for major computer systems conferences.
+      Every entry links to the official conference source.
+    </p>
+    {% if monitor %}
+    <p class="deadline-monitor__checked">
+      <i class="fas fa-sync-alt" aria-hidden="true"></i>
+      Last checked {{ monitor.last_checked | date: "%Y-%m-%d %H:%M UTC" }}
+    </p>
+    {% endif %}
+  </header>
+
+  {% if monitor %}
+  <section class="deadline-summary" aria-label="Monitor summary">
+    <div class="deadline-summary__item">
+      <strong>{{ monitor.summary.conferences }}</strong>
+      <span>conferences</span>
+    </div>
+    <div class="deadline-summary__item">
+      <strong>{{ monitor.summary.upcoming_deadlines }}</strong>
+      <span>upcoming DDLs</span>
+    </div>
+    <div class="deadline-summary__item">
+      <strong>{{ monitor.summary.tpc_nominations }}</strong>
+      <span>TPC calls found</span>
+    </div>
+  </section>
+
+  <div class="deadline-toolbar" aria-label="Filter conferences">
+    <button class="deadline-filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+    <button class="deadline-filter" type="button" data-filter="upcoming" aria-pressed="false">Upcoming</button>
+    <button class="deadline-filter" type="button" data-filter="tpc" aria-pressed="false">TPC calls</button>
+  </div>
+
+  <div class="deadline-grid">
+    {% for conference in monitor.conferences %}
+      {% assign has_upcoming = false %}
+      {% for deadline in conference.deadlines %}
+        {% if deadline.status == "upcoming" %}
+          {% assign has_upcoming = true %}
+        {% endif %}
+      {% endfor %}
+      <article
+        class="deadline-card"
+        data-upcoming="{{ has_upcoming }}"
+        data-tpc="{{ conference.tpc_nomination.status }}"
+      >
+        <div class="deadline-card__heading">
+          <div>
+            <p class="deadline-card__area">{{ conference.area }}</p>
+            <h2>{{ conference.name }} <span>{{ conference.edition }}</span></h2>
+          </div>
+          {% if conference.source_status == "ok" %}
+            <span class="source-state source-state--ok" title="Official source reachable">
+              <i class="fas fa-check-circle" aria-hidden="true"></i>
+              Official
+            </span>
+          {% else %}
+            <span class="source-state source-state--error" title="Latest check failed; retained data may be shown">
+              <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+              Check failed
+            </span>
+          {% endif %}
+        </div>
+
+        <div class="deadline-card__section">
+          <h3><i class="fas fa-calendar-alt" aria-hidden="true"></i> Submission deadlines</h3>
+          {% if conference.deadlines.size > 0 %}
+            <ol class="deadline-list">
+              {% for deadline in conference.deadlines %}
+              <li class="deadline-list__item deadline-list__item--{{ deadline.status }}">
+                <div>
+                  <span class="deadline-list__label">{{ deadline.label }}</span>
+                  <time datetime="{{ deadline.date }}">{{ deadline.display_date }}</time>
+                </div>
+                {% if deadline.status == "upcoming" %}
+                  <span class="deadline-badge">{{ deadline.days_remaining }} days</span>
+                {% else %}
+                  <span class="deadline-badge deadline-badge--muted">passed</span>
+                {% endif %}
+              </li>
+              {% endfor %}
+            </ol>
+          {% else %}
+            <p class="deadline-card__empty">The next submission deadline has not been announced on the official source.</p>
+          {% endif %}
+        </div>
+
+        <div class="deadline-card__section deadline-card__section--tpc">
+          <h3><i class="fas fa-user-plus" aria-hidden="true"></i> TPC self-nomination</h3>
+          {% if conference.tpc_nomination.status == "found" %}
+            <a class="tpc-link" href="{{ conference.tpc_nomination.url }}" target="_blank" rel="noopener">
+              {{ conference.tpc_nomination.label }}
+              <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+            </a>
+          {% elsif conference.tpc_nomination.status == "unknown" %}
+            <p class="tpc-state tpc-state--unknown">Official source unavailable during the latest check.</p>
+          {% else %}
+            <p class="tpc-state">Not found on the monitored official page.</p>
+          {% endif %}
+        </div>
+
+        <a class="deadline-card__source" href="{{ conference.source_url }}" target="_blank" rel="noopener">
+          View official source
+          <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+        </a>
+      </article>
+    {% endfor %}
+  </div>
+
+  <p class="deadline-no-results" hidden>No conferences match this filter.</p>
+
+  <aside class="deadline-method">
+    <h2>Monitoring policy</h2>
+    <p>
+      The monitor checks official conference and society pages once per day. “Not found” means that no explicit
+      TPC self-nomination notice was detected on the monitored official page; it does not imply that the conference
+      never accepts nominations. Always verify time zones and last-minute changes at the linked source.
+    </p>
+  </aside>
+  {% else %}
+  <p class="notice--warning">Conference data is not available yet.</p>
+  {% endif %}
+</div>
+
+<script>
+  (function () {
+    var buttons = document.querySelectorAll(".deadline-filter");
+    var cards = document.querySelectorAll(".deadline-card");
+    var emptyState = document.querySelector(".deadline-no-results");
+
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        var filter = button.getAttribute("data-filter");
+        var visible = 0;
+
+        buttons.forEach(function (item) {
+          var active = item === button;
+          item.classList.toggle("is-active", active);
+          item.setAttribute("aria-pressed", active ? "true" : "false");
+        });
+
+        cards.forEach(function (card) {
+          var show =
+            filter === "all" ||
+            (filter === "upcoming" && card.getAttribute("data-upcoming") === "true") ||
+            (filter === "tpc" && card.getAttribute("data-tpc") === "found");
+          card.hidden = !show;
+          if (show) visible += 1;
+        });
+
+        if (emptyState) emptyState.hidden = visible !== 0;
+      });
+    });
+  })();
+</script>

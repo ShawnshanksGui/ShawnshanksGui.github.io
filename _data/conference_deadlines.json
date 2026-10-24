@@ -1,0 +1,298 @@
+{
+  "last_checked": "2026-10-24T05:24:25+00:00",
+  "monitor_date": "2026-10-24",
+  "summary": {
+    "conferences": 8,
+    "upcoming_deadlines": 3,
+    "tpc_nominations": 0
+  },
+  "conferences": [
+    {
+      "id": "sigcomm",
+      "name": "ACM SIGCOMM",
+      "area": "Networking",
+      "edition": "2027",
+      "source_url": "https://conferences.sigcomm.org/sigcomm/2027/",
+      "source_status": "ok",
+      "deadlines": [
+        {
+          "label": "Main Conference Paper Submission",
+          "date": "2027-02-02",
+          "display_date": "Tuesday, February 2, 2027",
+          "days_remaining": 101,
+          "status": "upcoming",
+          "source_url": "https://conferences.sigcomm.org/sigcomm/2027/"
+        }
+      ],
+      "next_deadline": {
+        "label": "Main Conference Paper Submission",
+        "date": "2027-02-02",
+        "display_date": "Tuesday, February 2, 2027",
+        "days_remaining": 101,
+        "status": "upcoming",
+        "source_url": "https://conferences.sigcomm.org/sigcomm/2027/"
+      },
+      "tpc_nomination": {
+        "status": "not_found",
+        "url": "https://conferences.sigcomm.org/sigcomm/2027/",
+        "label": "No TPC self-nomination information found on the monitored official page."
+      },
+      "tpc_sources_checked": [
+        "https://conferences.sigcomm.org/sigcomm/2027/"
+      ]
+    },
+    {
+      "id": "nsdi",
+      "name": "USENIX NSDI",
+      "area": "Networked Systems",
+      "edition": "2027",
+      "source_url": "https://www.usenix.org/conference/nsdi27/call-for-papers",
+      "source_status": "ok",
+      "deadlines": [
+        {
+          "label": "Paper titles and abstracts",
+          "date": "2026-04-16",
+          "display_date": "Thursday, April 16, 2026",
+          "days_remaining": -191,
+          "status": "passed",
+          "source_url": "https://www.usenix.org/conference/nsdi27/call-for-papers"
+        },
+        {
+          "label": "Full paper submissions",
+          "date": "2026-04-23",
+          "display_date": "Thursday, April 23, 2026",
+          "days_remaining": -184,
+          "status": "passed",
+          "source_url": "https://www.usenix.org/conference/nsdi27/call-for-papers"
+        },
+        {
+          "label": "Paper titles and abstracts",
+          "date": "2026-09-10",
+          "display_date": "Thursday, September 10, 2026",
+          "days_remaining": -44,
+          "status": "passed",
+          "source_url": "https://www.usenix.org/conference/nsdi27/call-for-papers"
+        },
+        {
+          "label": "Full paper submissions",
+          "date": "2026-09-17",
+          "display_date": "Thursday, September 17, 2026",
+          "days_remaining": -37,
+          "status": "passed",
+          "source_url": "https://www.usenix.org/conference/nsdi27/call-for-papers"
+        }
+      ],
+      "next_deadline": null,
+      "tpc_nomination": {
+        "status": "not_found",
+        "url": "https://www.usenix.org/conference/nsdi27/call-for-papers",
+        "label": "No TPC self-nomination information found on the monitored official page."
+      },
+      "tpc_sources_checked": [
+        "https://www.usenix.org/conference/nsdi27/call-for-papers"
+      ]
+    },
+    {
+      "id": "osdi",
+      "name": "USENIX OSDI",
+      "area": "Operating Systems",
+      "edition": "2027",
+      "source_url": "https://www.usenix.org/conference/osdi27/call-for-papers",
+      "source_status": "ok",
+      "deadlines": [
+        {
+          "label": "Abstract registrations",
+          "date": "2026-12-01",
+          "display_date": "Tuesday, December 1, 2026",
+          "days_remaining": 38,
+          "status": "upcoming",
+          "source_url": "https://www.usenix.org/conference/osdi27/call-for-papers"
+        },
+        {
+          "label": "Complete paper submissions",
+          "date": "2026-12-08",
+          "display_date": "Tuesday, December 8, 2026",
+          "days_remaining": 45,
+          "status": "upcoming",
+          "source_url": "https://www.usenix.org/conference/osdi27/call-for-papers"
+        }
+      ],
+      "next_deadline": {
+        "label": "Abstract registrations",
+        "date": "2026-12-01",
+        "display_date": "Tuesday, December 1, 2026",
+        "days_remaining": 38,
+        "status": "upcoming",
+        "source_url": "https://www.usenix.org/conference/osdi27/call-for-papers"
+      },
+      "tpc_nomination": {
+        "status": "not_found",
+        "url": "https://www.usenix.org/conference/osdi27/call-for-papers",
+        "label": "No TPC self-nomination information found on the monitored official page."
+      },
+      "tpc_sources_checked": [
+        "https://www.usenix.org/conference/osdi27/call-for-papers"
+      ]
+    },
+    {
+      "id": "sosp",
+      "name": "ACM SOSP",
+      "area": "Operating Systems",
+      "edition": "2026",
+      "source_url": "https://sigops.org/s/conferences/sosp/2026//",
+      "source_status": "ok",
+      "deadlines": [],
+      "next_deadline": null,
+      "tpc_nomination": {
+        "status": "not_found",
+        "url": "https://sigops.org/s/conferences/sosp/2026//",
+        "label": "No TPC self-nomination information found on the monitored official page."
+      },
+      "tpc_sources_checked": [
+        "https://sigops.org/s/conferences/sosp/2026//"
+      ]
+    },
+    {
+      "id": "atc",
+      "name": "USENIX ATC",
+      "area": "Systems",
+      "edition": "2025",
+      "source_url": "https://www.usenix.org/conferences/byname/131",
+      "source_status": "ok",
+      "deadlines": [],
+      "next_deadline": null,
+      "tpc_nomination": {
+        "status": "not_found",
+        "url": "https://www.usenix.org/conferences/byname/131",
+        "label": "No TPC self-nomination information found on the monitored official page."
+      },
+      "tpc_sources_checked": [
+        "https://www.usenix.org/conferences/byname/131"
+      ]
+    },
+    {
+      "id": "eurosys",
+      "name": "ACM EuroSys",
+      "area": "Systems",
+      "edition": "2027",
+      "source_url": "https://2027.eurosys.org/cfp.html",
+      "source_status": "ok",
+      "deadlines": [
+        {
+          "label": "Paper titles and abstracts",
+          "date": "2026-05-07",
+          "display_date": "Thursday, May 7, 2026",
+          "days_remaining": -170,
+          "status": "passed",
+          "source_url": "https://2027.eurosys.org/cfp.html"
+        },
+        {
+          "label": "Full paper submissions",
+          "date": "2026-05-14",
+          "display_date": "Thursday, May 14, 2026",
+          "days_remaining": -163,
+          "status": "passed",
+          "source_url": "https://2027.eurosys.org/cfp.html"
+        },
+        {
+          "label": "Paper titles and abstracts",
+          "date": "2026-09-17",
+          "display_date": "Thursday, September 17, 2026",
+          "days_remaining": -37,
+          "status": "passed",
+          "source_url": "https://2027.eurosys.org/cfp.html"
+        },
+        {
+          "label": "Full paper submissions",
+          "date": "2026-09-24",
+          "display_date": "Thursday, September 24, 2026",
+          "days_remaining": -30,
+          "status": "passed",
+          "source_url": "https://2027.eurosys.org/cfp.html"
+        }
+      ],
+      "next_deadline": null,
+      "tpc_nomination": {
+        "status": "not_found",
+        "url": "https://2027.eurosys.org/cfp.html",
+        "label": "No TPC self-nomination information found on the monitored official page."
+      },
+      "tpc_sources_checked": [
+        "https://2027.eurosys.org/cfp.html",
+        "https://2027.eurosys.org/pc.html"
+      ]
+    },
+    {
+      "id": "asplos",
+      "name": "ACM ASPLOS",
+      "area": "Architecture & Systems",
+      "edition": "2027",
+      "source_url": "https://www.asplos-conference.org/asplos2027/cfp/",
+      "source_status": "ok",
+      "deadlines": [
+        {
+          "label": "Full paper submission",
+          "date": "2026-04-15",
+          "display_date": "April 15, 2026",
+          "days_remaining": -192,
+          "status": "passed",
+          "source_url": "https://www.asplos-conference.org/asplos2027/cfp/"
+        },
+        {
+          "label": "Full paper submission",
+          "date": "2026-09-09",
+          "display_date": "September 9, 2026",
+          "days_remaining": -45,
+          "status": "passed",
+          "source_url": "https://www.asplos-conference.org/asplos2027/cfp/"
+        }
+      ],
+      "next_deadline": null,
+      "tpc_nomination": {
+        "status": "not_found",
+        "url": "https://www.asplos-conference.org/asplos2027/cfp/",
+        "label": "No TPC self-nomination information found on the monitored official page."
+      },
+      "tpc_sources_checked": [
+        "https://www.asplos-conference.org/asplos2027/cfp/",
+        "https://www.asplos-conference.org/asplos2027/committee/"
+      ]
+    },
+    {
+      "id": "infocom",
+      "name": "IEEE INFOCOM",
+      "area": "Networking",
+      "edition": "2027",
+      "source_url": "https://infocom2027.ieee-infocom.org/call-papers",
+      "source_status": "ok",
+      "deadlines": [
+        {
+          "label": "Abstract",
+          "date": "2026-07-24",
+          "display_date": "24 July 2026",
+          "days_remaining": -92,
+          "status": "passed",
+          "source_url": "https://infocom2027.ieee-infocom.org/call-papers"
+        },
+        {
+          "label": "Full Paper",
+          "date": "2026-07-31",
+          "display_date": "31 July 2026",
+          "days_remaining": -85,
+          "status": "passed",
+          "source_url": "https://infocom2027.ieee-infocom.org/call-papers"
+        }
+      ],
+      "next_deadline": null,
+      "tpc_nomination": {
+        "status": "not_found",
+        "url": "https://infocom2027.ieee-infocom.org/call-papers",
+        "label": "No TPC self-nomination information found on the monitored official page."
+      },
+      "tpc_sources_checked": [
+        "https://infocom2027.ieee-infocom.org/call-papers",
+        "https://infocom2027.ieee-infocom.org/ieee-infocom-2027-tpc-meeting-program-and-logistics"
+      ]
+    }
+  ]
+}
