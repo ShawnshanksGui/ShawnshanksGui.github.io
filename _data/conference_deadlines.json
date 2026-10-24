@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-10-24T11:00:10+00:00",
+  "last_checked": "2026-10-24T11:03:23+00:00",
   "monitor_date": "2026-10-24",
   "summary": {
     "conferences": 8,
@@ -62,7 +62,7 @@
       "area": "Networked Systems",
       "edition": "2027",
       "source_url": "https://www.usenix.org/conference/nsdi27/call-for-papers",
-      "source_status": "error",
+      "source_status": "ok",
       "deadlines": [
         {
           "label": "Paper titles and abstracts",
@@ -124,8 +124,7 @@
       "aec_sources_checked": [
         "https://www.usenix.org/conference/nsdi27/call-for-papers",
         "https://www.usenix.org/conference/nsdi27/call-for-artifacts"
-      ],
-      "source_error": "https://www.usenix.org/conference/nsdi27/call-for-papers: URLError; https://www.usenix.org/conference/nsdi26/call-for-papers: older edition 2026"
+      ]
     },
     {
       "id": "osdi",
