@@ -1,9 +1,9 @@
 {
-  "last_checked": "2026-10-24T06:23:47+00:00",
+  "last_checked": "2026-10-24T10:21:55+00:00",
   "monitor_date": "2026-10-24",
   "summary": {
     "conferences": 8,
-    "upcoming_deadlines": 3,
+    "upcoming_deadlines": 5,
     "tpc_nominations": 0
   },
   "conferences": [
@@ -259,39 +259,46 @@
       ]
     },
     {
-      "id": "infocom",
-      "name": "IEEE INFOCOM",
+      "id": "conext",
+      "name": "ACM CoNEXT",
       "area": "Networking",
       "edition": "2027",
-      "source_url": "https://infocom2027.ieee-infocom.org/call-papers",
+      "source_url": "https://conferences.sigcomm.org/co-next/2027/#!/cfp",
       "source_status": "ok",
       "deadlines": [
         {
-          "label": "Abstract",
-          "date": "2026-07-24",
-          "display_date": "24 July 2026",
-          "days_remaining": -92,
-          "status": "passed",
-          "source_url": "https://infocom2027.ieee-infocom.org/call-papers"
+          "label": "Paper Submission",
+          "date": "2026-12-04",
+          "display_date": "December 4, 2026",
+          "days_remaining": 41,
+          "status": "upcoming",
+          "source_url": "https://conferences.sigcomm.org/co-next/2027/#!/cfp"
         },
         {
-          "label": "Full Paper",
-          "date": "2026-07-31",
-          "display_date": "31 July 2026",
-          "days_remaining": -85,
-          "status": "passed",
-          "source_url": "https://infocom2027.ieee-infocom.org/call-papers"
+          "label": "Paper Submission",
+          "date": "2027-06-04",
+          "display_date": "June 4, 2027",
+          "days_remaining": 223,
+          "status": "upcoming",
+          "source_url": "https://conferences.sigcomm.org/co-next/2027/#!/cfp"
         }
       ],
-      "next_deadline": null,
+      "next_deadline": {
+        "label": "Paper Submission",
+        "date": "2026-12-04",
+        "display_date": "December 4, 2026",
+        "days_remaining": 41,
+        "status": "upcoming",
+        "source_url": "https://conferences.sigcomm.org/co-next/2027/#!/cfp"
+      },
       "tpc_nomination": {
         "status": "not_found",
-        "url": "https://infocom2027.ieee-infocom.org/call-papers",
+        "url": "https://conferences.sigcomm.org/co-next/2027/#!/cfp",
         "label": "No TPC self-nomination information found on the monitored official page."
       },
       "tpc_sources_checked": [
-        "https://infocom2027.ieee-infocom.org/call-papers",
-        "https://infocom2027.ieee-infocom.org/ieee-infocom-2027-tpc-meeting-program-and-logistics"
+        "https://conferences.sigcomm.org/co-next/2027/#!/cfp",
+        "https://conferences2.sigcomm.org/co-next/2027/partials/shadow.html"
       ]
     }
   ]

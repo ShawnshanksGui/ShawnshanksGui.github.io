@@ -11,6 +11,11 @@ SPEC.loader.exec_module(monitor)
 
 
 class ConferenceMonitorTests(unittest.TestCase):
+    def test_monitored_conferences_include_conext_not_infocom(self):
+        ids = [conference["id"] for conference in monitor.CONFERENCES]
+        self.assertIn("conext", ids)
+        self.assertNotIn("infocom", ids)
+
     def test_parse_html_ignores_scripts_and_resolves_links(self):
         tokens, links = monitor.parse_html(
             """
@@ -51,6 +56,14 @@ class ConferenceMonitorTests(unittest.TestCase):
         self.assertEqual(explicit["status"], "found")
         self.assertEqual(explicit["url"], "https://example.org/form")
 
+    def test_shadow_tpc_call_is_treated_as_an_application(self):
+        result = monitor.extract_nomination(
+            ["Call For Shadow TPC Members"],
+            [],
+            "https://example.org/shadow",
+        )
+        self.assertEqual(result["status"], "found")
+
     def test_related_tpc_urls_stay_on_official_host(self):
         links = [
             {"text": "Program Committee", "url": "https://conf.example.org/committee/"},
@@ -77,6 +90,14 @@ class ConferenceMonitorTests(unittest.TestCase):
                 "https://example.org/archive",
             ],
         )
+
+    def test_infer_edition_prefers_official_url_year(self):
+        edition = monitor.infer_edition(
+            "https://example.org/conference/2027/cfp",
+            ["Publication in the March 2028 journal issue"],
+            date(2026, 10, 24),
+        )
+        self.assertEqual(edition, "2027")
 
 
 if __name__ == "__main__":

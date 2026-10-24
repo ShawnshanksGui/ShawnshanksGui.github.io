@@ -69,10 +69,17 @@ CONFERENCES = [
         "urls": ["https://www.asplos-conference.org/asplos{year}/cfp/"],
     },
     {
-        "id": "infocom",
-        "name": "IEEE INFOCOM",
+        "id": "conext",
+        "name": "ACM CoNEXT",
         "area": "Networking",
-        "urls": ["https://infocom{year}.ieee-infocom.org/call-papers"],
+        "urls": [
+            "https://conferences2.sigcomm.org/co-next/{year}/partials/cfp.html"
+        ],
+        "tpc_urls": [
+            "https://conferences2.sigcomm.org/co-next/{year}/partials/shadow.html"
+        ],
+        "public_url": "https://conferences.sigcomm.org/co-next/{year}/#!/cfp",
+        "tpc_public_url": "https://conferences.sigcomm.org/co-next/{year}/#!/shadow",
     },
 ]
 
@@ -95,10 +102,11 @@ DEADLINE_TERMS = re.compile(
     re.IGNORECASE,
 )
 NOMINATION_TERMS = re.compile(
-    r"\b(?:tpc|technical program committee|program committee|reviewer)"
+    r"\b(?:call for (?:shadow )?tpc members"
+    r"|(?:tpc|technical program committee|program committee|reviewer)"
     r"[\w\s/-]{0,45}(?:self[- ]nomination|nomination form|volunteer to serve)"
     r"|(?:self[- ]nomination|nominate yourself)[\w\s/-]{0,45}"
-    r"(?:tpc|technical program committee|program committee|reviewer)\b",
+    r"(?:tpc|technical program committee|program committee|reviewer))\b",
     re.IGNORECASE,
 )
 RELATED_TPC_LINK = re.compile(
@@ -247,9 +255,9 @@ def related_tpc_urls(links: list[dict[str, str]], source_url: str) -> list[str]:
     return urls[:3]
 
 
-def fetch(url: str, timeout: int = 25) -> tuple[str, str]:
+def fetch(url: str, timeout: int = 25, attempts: int = 2) -> tuple[str, str]:
     last_error: Exception | None = None
-    for attempt in range(2):
+    for attempt in range(attempts):
         request = Request(url, headers={"User-Agent": USER_AGENT, "Accept": "text/html"})
         try:
             with urlopen(request, timeout=timeout) as response:
@@ -262,7 +270,7 @@ def fetch(url: str, timeout: int = 25) -> tuple[str, str]:
             raise
         except (URLError, TimeoutError, ConnectionError, OSError) as error:
             last_error = error
-            if attempt == 0:
+            if attempt + 1 < attempts:
                 time.sleep(1)
     assert last_error is not None
     raise last_error
@@ -280,7 +288,11 @@ def candidate_urls(conference: dict[str, object], today: date) -> list[str]:
 
 
 def infer_edition(url: str, tokens: list[str], today: date) -> str:
-    nearby_years = re.findall(r"\b20\d{2}\b", " ".join(tokens[:80]) + " " + url)
+    url_years = re.findall(r"\b20\d{2}\b", url)
+    valid = [int(year) for year in url_years if today.year - 1 <= int(year) <= today.year + 2]
+    if valid:
+        return str(max(valid))
+    nearby_years = re.findall(r"\b20\d{2}\b", " ".join(tokens[:80]))
     valid = [int(year) for year in nearby_years if today.year - 1 <= int(year) <= today.year + 2]
     return str(max(valid)) if valid else "TBA"
 
@@ -293,13 +305,26 @@ def update_conference(
         try:
             raw, final_url = fetch(url)
             tokens, links = parse_html(raw, final_url)
-            deadlines = extract_deadlines(tokens, final_url, today)
-            nomination = extract_nomination(tokens, links, final_url)
-            checked_tpc_urls = [final_url]
+            edition = infer_edition(final_url, tokens, today)
+            previous_edition = str(previous.get("edition", "")) if previous else ""
+            if (
+                edition.isdigit()
+                and previous_edition.isdigit()
+                and int(edition) < int(previous_edition)
+            ):
+                errors.append(f"{final_url}: older edition {edition}")
+                continue
+            public_template = conference.get("public_url", final_url)
+            public_url = public_template.format(year=edition, yy=edition[-2:])
+            deadlines = extract_deadlines(tokens, public_url, today)
+            nomination = extract_nomination(tokens, links, public_url)
+            checked_tpc_urls = [public_url]
             if nomination["status"] == "not_found":
                 for related_url in related_tpc_urls(links, final_url):
                     try:
-                        related_raw, related_final_url = fetch(related_url)
+                        related_raw, related_final_url = fetch(
+                            related_url, timeout=10, attempts=1
+                        )
                         related_tokens, related_links = parse_html(
                             related_raw, related_final_url
                         )
@@ -312,12 +337,50 @@ def update_conference(
                             break
                     except (HTTPError, URLError, TimeoutError, ValueError, OSError):
                         continue
+            if nomination["status"] == "not_found" and edition.isdigit():
+                for template in conference.get("tpc_urls", []):
+                    tpc_url = template.format(year=edition, yy=edition[-2:])
+                    try:
+                        tpc_raw, tpc_final_url = fetch(
+                            tpc_url, timeout=10, attempts=1
+                        )
+                        tpc_tokens, tpc_links = parse_html(tpc_raw, tpc_final_url)
+                        checked_tpc_urls.append(tpc_final_url)
+                        tpc_text = " ".join(tpc_tokens)
+                        edition_matches = bool(
+                            re.search(
+                                rf"\b(?:CoNEXT\s+)?{re.escape(edition)}\b",
+                                tpc_text,
+                                re.IGNORECASE,
+                            )
+                        )
+                        has_application = (
+                            "shadow tpc" in tpc_text.lower()
+                            and (
+                                "how to apply" in tpc_text.lower()
+                                or "application deadline" in tpc_text.lower()
+                            )
+                        )
+                        if edition_matches and has_application:
+                            public_template = conference.get(
+                                "tpc_public_url", tpc_final_url
+                            )
+                            nomination = {
+                                "status": "found",
+                                "url": public_template.format(
+                                    year=edition, yy=edition[-2:]
+                                ),
+                                "label": "Shadow TPC application",
+                            }
+                            break
+                    except (HTTPError, URLError, TimeoutError, ValueError, OSError):
+                        continue
             return {
                 "id": conference["id"],
                 "name": conference["name"],
                 "area": conference["area"],
-                "edition": infer_edition(final_url, tokens, today),
-                "source_url": final_url,
+                "edition": edition,
+                "source_url": public_url,
                 "source_status": "ok",
                 "deadlines": deadlines,
                 "next_deadline": next(
