@@ -504,7 +504,14 @@ def update_conference(
                             tpc_url, timeout=10, attempts=1
                         )
                         tpc_tokens, tpc_links = parse_html(tpc_raw, tpc_final_url)
-                        checked_tpc_urls.append(tpc_final_url)
+                        tpc_source_template = conference.get(
+                            "tpc_public_url", tpc_final_url
+                        )
+                        checked_tpc_urls.append(
+                            tpc_source_template.format(
+                                year=edition, yy=edition[-2:]
+                            )
+                        )
                         tpc_text = " ".join(tpc_tokens)
                         edition_matches = bool(
                             re.search(

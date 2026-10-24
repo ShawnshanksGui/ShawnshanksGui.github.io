@@ -424,7 +424,7 @@
       },
       "tpc_sources_checked": [
         "https://conferences.sigcomm.org/co-next/2027/#!/cfp",
-        "https://conferences2.sigcomm.org/co-next/2027/partials/shadow.html"
+        "https://conferences.sigcomm.org/co-next/2027/#!/shadow"
       ],
       "aec_nomination": {
         "status": "not_found",

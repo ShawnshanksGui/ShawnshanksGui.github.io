@@ -287,6 +287,39 @@
   color: var(--ddl-red);
 }
 
+.nomination-source {
+  border-top: 1px dashed var(--ddl-line);
+  margin-top: 0.65rem;
+  padding-top: 0.6rem;
+
+  span {
+    color: var(--ddl-muted);
+    display: block;
+    font-size: 0.66rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: var(--ddl-green);
+    display: block;
+    font-size: 0.68rem;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    i {
+      font-size: 0.58rem;
+      margin-left: 0.15rem;
+    }
+  }
+}
+
 .conference-links {
   align-items: center;
   border-top: 1px dashed var(--ddl-line);

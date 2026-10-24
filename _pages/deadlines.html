@@ -121,6 +121,7 @@ author_profile: true
         </div>
 
         <div class="deadline-card__section deadline-card__section--tpc">
+          {% assign tpc_source_url = conference.tpc_sources_checked | last %}
           <h3><i class="fas fa-user-plus" aria-hidden="true"></i> TPC self-nomination</h3>
           {% if conference.tpc_nomination.status == "found" %}
             <a class="tpc-link" href="{{ conference.tpc_nomination.url }}" target="_blank" rel="noopener">
@@ -132,9 +133,19 @@ author_profile: true
           {% else %}
             <p class="tpc-state">Not found on the monitored official page.</p>
           {% endif %}
+          {% if tpc_source_url %}
+            <div class="nomination-source">
+              <span>Official TPC page</span>
+              <a href="{{ tpc_source_url }}" target="_blank" rel="noopener">
+                {{ tpc_source_url }}
+                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+              </a>
+            </div>
+          {% endif %}
         </div>
 
         <div class="deadline-card__section deadline-card__section--aec">
+          {% assign aec_source_url = conference.aec_sources_checked | last %}
           <h3><i class="fas fa-box-open" aria-hidden="true"></i> AEC TPC self-nomination</h3>
           {% if conference.aec_nomination.status == "found" %}
             <a class="tpc-link" href="{{ conference.aec_nomination.url }}" target="_blank" rel="noopener">
@@ -145,6 +156,15 @@ author_profile: true
             <p class="tpc-state tpc-state--unknown">Official AEC source unavailable during the latest check.</p>
           {% else %}
             <p class="tpc-state">Not found on the monitored official AEC page.</p>
+          {% endif %}
+          {% if aec_source_url %}
+            <div class="nomination-source">
+              <span>Official AEC page</span>
+              <a href="{{ aec_source_url }}" target="_blank" rel="noopener">
+                {{ aec_source_url }}
+                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+              </a>
+            </div>
           {% endif %}
         </div>
       </article>
