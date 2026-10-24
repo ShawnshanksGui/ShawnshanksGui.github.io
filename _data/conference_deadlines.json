@@ -1,11 +1,11 @@
 {
-  "last_checked": "2026-10-24T10:55:31+00:00",
+  "last_checked": "2026-10-24T11:00:10+00:00",
   "monitor_date": "2026-10-24",
   "summary": {
     "conferences": 8,
     "upcoming_deadlines": 5,
     "tpc_nominations": 0,
-    "aec_nominations": 3
+    "aec_nominations": 4
   },
   "conferences": [
     {
@@ -62,7 +62,7 @@
       "area": "Networked Systems",
       "edition": "2027",
       "source_url": "https://www.usenix.org/conference/nsdi27/call-for-papers",
-      "source_status": "ok",
+      "source_status": "error",
       "deadlines": [
         {
           "label": "Paper titles and abstracts",
@@ -124,7 +124,8 @@
       "aec_sources_checked": [
         "https://www.usenix.org/conference/nsdi27/call-for-papers",
         "https://www.usenix.org/conference/nsdi27/call-for-artifacts"
-      ]
+      ],
+      "source_error": "https://www.usenix.org/conference/nsdi27/call-for-papers: URLError; https://www.usenix.org/conference/nsdi26/call-for-papers: older edition 2026"
     },
     {
       "id": "osdi",
@@ -212,30 +213,44 @@
     },
     {
       "id": "atc",
-      "name": "USENIX ATC",
+      "name": "ACM ATC",
       "area": "Systems",
-      "edition": "2025",
-      "source_url": "https://www.usenix.org/conferences/byname/131",
+      "edition": "2026",
+      "source_url": "https://sigops.org/s/conferences/atc/2026/cfp.html",
       "source_status": "ok",
-      "deadlines": [],
+      "deadlines": [
+        {
+          "label": "Submission deadline",
+          "date": "2026-06-10",
+          "display_date": "June 10, 2026",
+          "days_remaining": -136,
+          "status": "passed",
+          "source_url": "https://sigops.org/s/conferences/atc/2026/cfp.html"
+        }
+      ],
       "next_deadline": null,
-      "submission_sites": [],
+      "submission_sites": [
+        {
+          "label": "HotCRP Submission Site",
+          "url": "https://atc26.hotcrp.com/"
+        }
+      ],
       "tpc_nomination": {
         "status": "not_found",
-        "url": "https://www.usenix.org/conferences/byname/131",
+        "url": "https://sigops.org/s/conferences/atc/2026/cfp.html",
         "label": "No TPC self-nomination information found on the monitored official page."
       },
       "tpc_sources_checked": [
-        "https://www.usenix.org/conferences/byname/131"
+        "https://sigops.org/s/conferences/atc/2026/cfp.html"
       ],
       "aec_nomination": {
-        "status": "not_found",
-        "url": "https://www.usenix.org/conferences/byname/131",
-        "label": "No AEC self-nomination information found on the monitored official page."
+        "status": "found",
+        "url": "https://forms.gle/63xtgr1dcu7uejLo6",
+        "label": "AEC self-nomination form"
       },
       "aec_sources_checked": [
-        "https://www.usenix.org/conferences/byname/131",
-        "https://www.usenix.org/conference/atc25/call-for-artifacts"
+        "https://sigops.org/s/conferences/atc/2026/cfp.html",
+        "https://sysartifacts.github.io/atc2026/aec-call"
       ]
     },
     {

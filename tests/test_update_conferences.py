@@ -15,6 +15,9 @@ class ConferenceMonitorTests(unittest.TestCase):
         ids = [conference["id"] for conference in monitor.CONFERENCES]
         self.assertIn("conext", ids)
         self.assertNotIn("infocom", ids)
+        atc = next(conference for conference in monitor.CONFERENCES if conference["id"] == "atc")
+        self.assertEqual(atc["name"], "ACM ATC")
+        self.assertTrue(all("usenix.org" not in url for url in atc["urls"]))
 
     def test_parse_html_ignores_scripts_and_resolves_links(self):
         tokens, links = monitor.parse_html(
@@ -42,6 +45,14 @@ class ConferenceMonitorTests(unittest.TestCase):
         )
         self.assertEqual([item["date"] for item in deadlines], ["2026-12-01", "2026-12-08"])
         self.assertTrue(all(item["status"] == "upcoming" for item in deadlines))
+
+    def test_extract_deadlines_accepts_generic_submission_deadline(self):
+        deadlines = monitor.extract_deadlines(
+            ["Submission deadline (no extensions)", "June 10, 2026"],
+            "https://example.org/cfp",
+            date(2026, 5, 1),
+        )
+        self.assertEqual(deadlines[0]["date"], "2026-06-10")
 
     def test_nomination_requires_explicit_nomination_language(self):
         ordinary = monitor.extract_nomination(

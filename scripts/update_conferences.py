@@ -60,14 +60,13 @@ CONFERENCES = [
     },
     {
         "id": "atc",
-        "name": "USENIX ATC",
+        "name": "ACM ATC",
         "area": "Systems",
         "urls": [
-            "https://www.usenix.org/conference/atc{yy}/call-for-papers",
-            "https://www.usenix.org/conferences/byname/131",
+            "https://sigops.org/s/conferences/atc/{year}/cfp.html",
         ],
         "aec_urls": [
-            "https://www.usenix.org/conference/atc{yy}/call-for-artifacts"
+            "https://sysartifacts.github.io/atc{year}/aec-call"
         ],
     },
     {
@@ -122,7 +121,7 @@ DATE_PATTERN = re.compile(
 DEADLINE_TERMS = re.compile(
     r"\b(?:abstract(?: registrations?)?|paper titles? and abstracts?|"
     r"full paper(?: submissions?)?|complete paper submissions?|"
-    r"main conference paper submission|paper submission)\b",
+    r"main conference paper submission|paper submission|submission deadline)\b",
     re.IGNORECASE,
 )
 NOMINATION_TERMS = re.compile(
@@ -226,6 +225,8 @@ def clean_label(text: str) -> str:
 def extract_deadlines(tokens: list[str], source_url: str, today: date) -> list[dict[str, object]]:
     found: dict[tuple[str, str], dict[str, object]] = {}
     for index, token in enumerate(tokens):
+        if "artifact" in token.lower() or "camera" in token.lower():
+            continue
         if not DEADLINE_TERMS.search(token):
             continue
         match = None
