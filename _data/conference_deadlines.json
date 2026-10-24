@@ -1,10 +1,11 @@
 {
-  "last_checked": "2026-10-24T10:21:55+00:00",
+  "last_checked": "2026-10-24T10:46:53+00:00",
   "monitor_date": "2026-10-24",
   "summary": {
     "conferences": 8,
     "upcoming_deadlines": 5,
-    "tpc_nominations": 0
+    "tpc_nominations": 0,
+    "aec_nominations": 3
   },
   "conferences": [
     {
@@ -32,12 +33,26 @@
         "status": "upcoming",
         "source_url": "https://conferences.sigcomm.org/sigcomm/2027/"
       },
+      "submission_sites": [
+        {
+          "label": "paper submission site",
+          "url": "https://sigcomm27.hotcrp.com/"
+        }
+      ],
       "tpc_nomination": {
         "status": "not_found",
         "url": "https://conferences.sigcomm.org/sigcomm/2027/",
         "label": "No TPC self-nomination information found on the monitored official page."
       },
       "tpc_sources_checked": [
+        "https://conferences.sigcomm.org/sigcomm/2027/"
+      ],
+      "aec_nomination": {
+        "status": "not_found",
+        "url": "https://conferences.sigcomm.org/sigcomm/2027/",
+        "label": "No AEC self-nomination information found on the monitored official page."
+      },
+      "aec_sources_checked": [
         "https://conferences.sigcomm.org/sigcomm/2027/"
       ]
     },
@@ -83,12 +98,30 @@
         }
       ],
       "next_deadline": null,
+      "submission_sites": [
+        {
+          "label": "submission form",
+          "url": "https://nsdi27spring.usenix.hotcrp.com/"
+        },
+        {
+          "label": "SUBMIT YOUR WORK",
+          "url": "https://nsdi27fall.usenix.hotcrp.com/"
+        }
+      ],
       "tpc_nomination": {
         "status": "not_found",
         "url": "https://www.usenix.org/conference/nsdi27/call-for-papers",
         "label": "No TPC self-nomination information found on the monitored official page."
       },
       "tpc_sources_checked": [
+        "https://www.usenix.org/conference/nsdi27/call-for-papers"
+      ],
+      "aec_nomination": {
+        "status": "not_found",
+        "url": "https://www.usenix.org/conference/nsdi27/call-for-papers",
+        "label": "No AEC self-nomination information found on the monitored official page."
+      },
+      "aec_sources_checked": [
         "https://www.usenix.org/conference/nsdi27/call-for-papers"
       ]
     },
@@ -125,12 +158,21 @@
         "status": "upcoming",
         "source_url": "https://www.usenix.org/conference/osdi27/call-for-papers"
       },
+      "submission_sites": [],
       "tpc_nomination": {
         "status": "not_found",
         "url": "https://www.usenix.org/conference/osdi27/call-for-papers",
         "label": "No TPC self-nomination information found on the monitored official page."
       },
       "tpc_sources_checked": [
+        "https://www.usenix.org/conference/osdi27/call-for-papers"
+      ],
+      "aec_nomination": {
+        "status": "not_found",
+        "url": "https://www.usenix.org/conference/osdi27/call-for-papers",
+        "label": "No AEC self-nomination information found on the monitored official page."
+      },
+      "aec_sources_checked": [
         "https://www.usenix.org/conference/osdi27/call-for-papers"
       ]
     },
@@ -143,6 +185,12 @@
       "source_status": "ok",
       "deadlines": [],
       "next_deadline": null,
+      "submission_sites": [
+        {
+          "label": "HotCRP Submission Site",
+          "url": "https://sosp26.hotcrp.com/"
+        }
+      ],
       "tpc_nomination": {
         "status": "not_found",
         "url": "https://sigops.org/s/conferences/sosp/2026//",
@@ -150,6 +198,15 @@
       },
       "tpc_sources_checked": [
         "https://sigops.org/s/conferences/sosp/2026//"
+      ],
+      "aec_nomination": {
+        "status": "found",
+        "url": "https://forms.gle/ccxUDjSqYtPmYd3k8",
+        "label": "AEC self-nomination form"
+      },
+      "aec_sources_checked": [
+        "https://sigops.org/s/conferences/sosp/2026//",
+        "https://sysartifacts.github.io/sosp2026/aec-call"
       ]
     },
     {
@@ -161,12 +218,21 @@
       "source_status": "ok",
       "deadlines": [],
       "next_deadline": null,
+      "submission_sites": [],
       "tpc_nomination": {
         "status": "not_found",
         "url": "https://www.usenix.org/conferences/byname/131",
         "label": "No TPC self-nomination information found on the monitored official page."
       },
       "tpc_sources_checked": [
+        "https://www.usenix.org/conferences/byname/131"
+      ],
+      "aec_nomination": {
+        "status": "not_found",
+        "url": "https://www.usenix.org/conferences/byname/131",
+        "label": "No AEC self-nomination information found on the monitored official page."
+      },
+      "aec_sources_checked": [
         "https://www.usenix.org/conferences/byname/131"
       ]
     },
@@ -212,6 +278,16 @@
         }
       ],
       "next_deadline": null,
+      "submission_sites": [
+        {
+          "label": "eurosys27-spring",
+          "url": "https://eurosys27-spring.hotcrp.com/"
+        },
+        {
+          "label": "eurosys27-fall",
+          "url": "https://eurosys27-fall.hotcrp.com/"
+        }
+      ],
       "tpc_nomination": {
         "status": "not_found",
         "url": "https://2027.eurosys.org/cfp.html",
@@ -220,6 +296,15 @@
       "tpc_sources_checked": [
         "https://2027.eurosys.org/cfp.html",
         "https://2027.eurosys.org/pc.html"
+      ],
+      "aec_nomination": {
+        "status": "found",
+        "url": "https://forms.gle/qcUT5PR5tAUANzFw5",
+        "label": "AEC self-nomination form"
+      },
+      "aec_sources_checked": [
+        "https://2027.eurosys.org/cfp.html",
+        "https://sysartifacts.github.io/eurosys2027/aec-call"
       ]
     },
     {
@@ -248,6 +333,12 @@
         }
       ],
       "next_deadline": null,
+      "submission_sites": [
+        {
+          "label": "September Cycle HotCRP",
+          "url": "https://asplos27-sep.hotcrp.com/"
+        }
+      ],
       "tpc_nomination": {
         "status": "not_found",
         "url": "https://www.asplos-conference.org/asplos2027/cfp/",
@@ -256,6 +347,15 @@
       "tpc_sources_checked": [
         "https://www.asplos-conference.org/asplos2027/cfp/",
         "https://www.asplos-conference.org/asplos2027/committee/"
+      ],
+      "aec_nomination": {
+        "status": "found",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLScnoVjmj9yXHcwByoqR5MRRrn7OmhEMmoh_TvqIDTwCnP9QBg/viewform",
+        "label": "AEC self-nomination form"
+      },
+      "aec_sources_checked": [
+        "https://www.asplos-conference.org/asplos2027/cfp/",
+        "https://www.asplos-conference.org/asplos2027/for-reviewers/"
       ]
     },
     {
@@ -291,6 +391,16 @@
         "status": "upcoming",
         "source_url": "https://conferences.sigcomm.org/co-next/2027/#!/cfp"
       },
+      "submission_sites": [
+        {
+          "label": "conext27-winter",
+          "url": "https://conext27-winter.hotcrp.com/"
+        },
+        {
+          "label": "conext27-june",
+          "url": "https://conext27-june.hotcrp.com/"
+        }
+      ],
       "tpc_nomination": {
         "status": "not_found",
         "url": "https://conferences.sigcomm.org/co-next/2027/#!/cfp",
@@ -299,6 +409,14 @@
       "tpc_sources_checked": [
         "https://conferences.sigcomm.org/co-next/2027/#!/cfp",
         "https://conferences2.sigcomm.org/co-next/2027/partials/shadow.html"
+      ],
+      "aec_nomination": {
+        "status": "not_found",
+        "url": "https://conferences.sigcomm.org/co-next/2027/#!/cfp",
+        "label": "No AEC self-nomination information found on the monitored official page."
+      },
+      "aec_sources_checked": [
+        "https://conferences.sigcomm.org/co-next/2027/#!/cfp"
       ]
     }
   ]

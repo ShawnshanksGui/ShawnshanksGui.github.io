@@ -52,7 +52,7 @@
   border: 1px solid var(--ddl-line);
   border-radius: 6px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-bottom: 1rem;
 }
 
@@ -185,6 +185,33 @@
   }
 }
 
+.deadline-card__section--tpc,
+.deadline-card__section--aec {
+  display: none;
+}
+
+.deadline-monitor[data-view="tpc"] {
+  .deadline-card__section--submission,
+  .deadline-card__section--aec {
+    display: none;
+  }
+
+  .deadline-card__section--tpc {
+    display: block;
+  }
+}
+
+.deadline-monitor[data-view="aec"] {
+  .deadline-card__section--submission,
+  .deadline-card__section--tpc {
+    display: none;
+  }
+
+  .deadline-card__section--aec {
+    display: block;
+  }
+}
+
 .deadline-list {
   list-style: none;
   margin: 0;
@@ -260,18 +287,37 @@
   color: var(--ddl-red);
 }
 
-.deadline-card__source {
-  color: var(--ddl-green);
-  font-size: 0.73rem;
-  font-weight: 700;
-  margin-top: auto;
-  padding-top: 0.85rem;
-  text-decoration: none;
+.conference-links {
+  align-items: center;
+  border-top: 1px dashed var(--ddl-line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.8rem;
+  margin-top: 0.65rem;
+  padding-top: 0.65rem;
 
-  i {
-    font-size: 0.62rem;
-    margin-left: 0.2rem;
+  a,
+  span {
+    font-size: 0.7rem;
   }
+
+  a {
+    color: var(--ddl-green);
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    i {
+      margin-right: 0.15rem;
+    }
+  }
+}
+
+.conference-links__missing {
+  color: var(--ddl-muted);
 }
 
 .deadline-no-results {
@@ -328,8 +374,13 @@
     overflow-wrap: anywhere;
   }
 
+  .deadline-toolbar {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+
   .deadline-summary__item {
-    padding: 0.7rem 0.55rem;
+    padding: 0.7rem 0.35rem;
 
     strong {
       font-size: 1.1rem;

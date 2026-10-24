@@ -8,6 +8,7 @@ import json
 import re
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
@@ -25,18 +26,27 @@ CONFERENCES = [
         "name": "ACM SIGCOMM",
         "area": "Networking",
         "urls": ["https://conferences.sigcomm.org/sigcomm/{year}/"],
+        "aec_urls": [
+            "https://conferences.sigcomm.org/sigcomm/{year}/artifact-evaluation/"
+        ],
     },
     {
         "id": "nsdi",
         "name": "USENIX NSDI",
         "area": "Networked Systems",
         "urls": ["https://www.usenix.org/conference/nsdi{yy}/call-for-papers"],
+        "aec_urls": [
+            "https://www.usenix.org/conference/nsdi{yy}/call-for-artifacts"
+        ],
     },
     {
         "id": "osdi",
         "name": "USENIX OSDI",
         "area": "Operating Systems",
         "urls": ["https://www.usenix.org/conference/osdi{yy}/call-for-papers"],
+        "aec_urls": [
+            "https://www.usenix.org/conference/osdi{yy}/call-for-artifacts"
+        ],
     },
     {
         "id": "sosp",
@@ -46,6 +56,7 @@ CONFERENCES = [
             "https://www.sosp.org/{year}/",
             "https://www.sosp.org/",
         ],
+        "aec_urls": ["https://sysartifacts.github.io/sosp{year}/aec-call"],
     },
     {
         "id": "atc",
@@ -55,18 +66,27 @@ CONFERENCES = [
             "https://www.usenix.org/conference/atc{yy}/call-for-papers",
             "https://www.usenix.org/conferences/byname/131",
         ],
+        "aec_urls": [
+            "https://www.usenix.org/conference/atc{yy}/call-for-artifacts"
+        ],
     },
     {
         "id": "eurosys",
         "name": "ACM EuroSys",
         "area": "Systems",
         "urls": ["https://{year}.eurosys.org/cfp.html"],
+        "aec_urls": [
+            "https://sysartifacts.github.io/eurosys{year}/aec-call"
+        ],
     },
     {
         "id": "asplos",
         "name": "ACM ASPLOS",
         "area": "Architecture & Systems",
         "urls": ["https://www.asplos-conference.org/asplos{year}/cfp/"],
+        "aec_urls": [
+            "https://www.asplos-conference.org/asplos{year}/for-reviewers/"
+        ],
     },
     {
         "id": "conext",
@@ -78,8 +98,12 @@ CONFERENCES = [
         "tpc_urls": [
             "https://conferences2.sigcomm.org/co-next/{year}/partials/shadow.html"
         ],
+        "aec_urls": [
+            "https://conferences2.sigcomm.org/co-next/{year}/partials/call_for_artifactcommittee.html"
+        ],
         "public_url": "https://conferences.sigcomm.org/co-next/{year}/#!/cfp",
         "tpc_public_url": "https://conferences.sigcomm.org/co-next/{year}/#!/shadow",
+        "aec_public_url": "https://conferences.sigcomm.org/co-next/{year}/#!/cfaec",
     },
 ]
 
@@ -112,6 +136,26 @@ NOMINATION_TERMS = re.compile(
 RELATED_TPC_LINK = re.compile(
     r"\b(?:tpc|technical program committee|program committee|"
     r"self[- ]nomination|nomination)\b",
+    re.IGNORECASE,
+)
+AEC_ROLE_TERMS = re.compile(
+    r"\b(?:artifact evaluation committee|artifact evaluators?|"
+    r"artifact reviewers?|AEC)\b",
+    re.IGNORECASE,
+)
+AEC_ACTION_TERMS = re.compile(
+    r"\b(?:self[- ]nomination|nomination (?:page|form)|apply now|"
+    r"how to apply|call for evaluators|interested in reviewing artifacts|"
+    r"join the artifact evaluation committee)\b",
+    re.IGNORECASE,
+)
+HOTCRP_URL_PATTERN = re.compile(
+    r"https?://[A-Za-z0-9.-]*hotcrp\.com(?:/[^\s\"'<>]*)?",
+    re.IGNORECASE,
+)
+RELATED_SUBMISSION_LINK = re.compile(
+    r"\b(?:call for papers|submission instructions|paper submission|"
+    r"main conference paper submission|submit your work)\b",
     re.IGNORECASE,
 )
 
@@ -255,6 +299,100 @@ def related_tpc_urls(links: list[dict[str, str]], source_url: str) -> list[str]:
     return urls[:3]
 
 
+def extract_submission_sites(
+    tokens: list[str], links: list[dict[str, str]]
+) -> list[dict[str, str]]:
+    sites: list[dict[str, str]] = []
+    seen: set[str] = set()
+
+    def add(url: str, label: str = "") -> None:
+        clean_url = url.rstrip(".,);]") + ("/" if not url.rstrip(".,);]").endswith("/") else "")
+        parsed = urlparse(clean_url)
+        host = parsed.netloc.lower()
+        if not host.endswith("hotcrp.com"):
+            return
+        clean_url = parsed._replace(scheme="https").geturl()
+        short_host = host.removesuffix(".hotcrp.com")
+        combined = f"{short_host} {label}".lower()
+        if "artifact" in combined or re.search(r"(?:^|[-.\s])ae(?:[-.\s]|$)", combined):
+            return
+        if clean_url in seen:
+            return
+        seen.add(clean_url)
+        clean_label = " ".join(label.split())
+        if not clean_label or clean_label.startswith(("http://", "https://")):
+            clean_label = short_host
+        sites.append({"label": clean_label[:80], "url": clean_url})
+
+    for link in links:
+        add(link["url"], link["text"])
+    for token in tokens:
+        for match in HOTCRP_URL_PATTERN.finditer(token):
+            add(match.group(0))
+    return sites
+
+
+def related_submission_urls(
+    links: list[dict[str, str]], source_url: str
+) -> list[str]:
+    source_host = urlparse(source_url).netloc
+    urls: list[str] = []
+    for link in links:
+        candidate = f"{link['text']} {link['url']}"
+        parsed = urlparse(link["url"])
+        if (
+            RELATED_SUBMISSION_LINK.search(candidate)
+            and parsed.scheme in {"http", "https"}
+            and parsed.netloc == source_host
+        ):
+            clean_url = parsed._replace(fragment="").geturl()
+            if clean_url != source_url and clean_url not in urls:
+                urls.append(clean_url)
+    return urls[:2]
+
+
+def extract_aec_nomination(
+    tokens: list[str], links: list[dict[str, str]], source_url: str
+) -> dict[str, str]:
+    text = " ".join(tokens)
+    if not (AEC_ROLE_TERMS.search(text) and AEC_ACTION_TERMS.search(text)):
+        return {
+            "status": "not_found",
+            "url": source_url,
+            "label": "No AEC self-nomination information found on the monitored official page.",
+        }
+
+    application_url = ""
+    for link in links:
+        candidate = f"{link['text']} {link['url']}"
+        if re.search(
+            r"self[- ]nomination|nomination|apply|application|"
+            r"forms\.gle|docs\.google\.com/forms",
+            candidate,
+            re.IGNORECASE,
+        ):
+            application_url = link["url"]
+            break
+    source_is_application_page = bool(
+        re.search(
+            r"(?:aec-call|for-reviewers|artifactcommittee)",
+            urlparse(source_url).path,
+            re.IGNORECASE,
+        )
+    )
+    if not application_url and not source_is_application_page:
+        return {
+            "status": "not_found",
+            "url": source_url,
+            "label": "No AEC self-nomination information found on the monitored official page.",
+        }
+    return {
+        "status": "found",
+        "url": application_url or source_url,
+        "label": "AEC self-nomination form",
+    }
+
+
 def fetch(url: str, timeout: int = 25, attempts: int = 2) -> tuple[str, str]:
     last_error: Exception | None = None
     for attempt in range(attempts):
@@ -317,6 +455,26 @@ def update_conference(
             public_template = conference.get("public_url", final_url)
             public_url = public_template.format(year=edition, yy=edition[-2:])
             deadlines = extract_deadlines(tokens, public_url, today)
+            submission_sites = extract_submission_sites(tokens, links)
+            if not submission_sites:
+                for submission_url in related_submission_urls(links, final_url):
+                    try:
+                        submission_raw, submission_final_url = fetch(
+                            submission_url, timeout=10, attempts=1
+                        )
+                        submission_tokens, submission_links = parse_html(
+                            submission_raw, submission_final_url
+                        )
+                        submission_sites.extend(
+                            extract_submission_sites(
+                                submission_tokens, submission_links
+                            )
+                        )
+                    except (HTTPError, URLError, TimeoutError, ValueError, OSError):
+                        continue
+            submission_sites = list(
+                {site["url"]: site for site in submission_sites}.values()
+            )
             nomination = extract_nomination(tokens, links, public_url)
             checked_tpc_urls = [public_url]
             if nomination["status"] == "not_found":
@@ -375,6 +533,42 @@ def update_conference(
                             break
                     except (HTTPError, URLError, TimeoutError, ValueError, OSError):
                         continue
+            aec_nomination = extract_aec_nomination(tokens, links, public_url)
+            checked_aec_urls = [public_url]
+            if aec_nomination["status"] == "not_found" and edition.isdigit():
+                for template in conference.get("aec_urls", []):
+                    aec_url = template.format(year=edition, yy=edition[-2:])
+                    try:
+                        aec_raw, aec_final_url = fetch(
+                            aec_url, timeout=10, attempts=1
+                        )
+                        aec_tokens, aec_links = parse_html(aec_raw, aec_final_url)
+                        checked_aec_urls.append(aec_final_url)
+                        aec_text = " ".join(aec_tokens)
+                        edition_matches = bool(
+                            re.search(
+                                rf"\b[A-Za-z][A-Za-z-]*\s*[’']?"
+                                rf"{re.escape(edition[-2:])}\b"
+                                rf"|\b{re.escape(edition)}\b",
+                                aec_text,
+                                re.IGNORECASE,
+                            )
+                        )
+                        candidate = extract_aec_nomination(
+                            aec_tokens, aec_links, aec_final_url
+                        )
+                        if edition_matches and candidate["status"] == "found":
+                            if (
+                                candidate["url"] == aec_final_url
+                                and conference.get("aec_public_url")
+                            ):
+                                candidate["url"] = conference["aec_public_url"].format(
+                                    year=edition, yy=edition[-2:]
+                                )
+                            aec_nomination = candidate
+                            break
+                    except (HTTPError, URLError, TimeoutError, ValueError, OSError):
+                        continue
             return {
                 "id": conference["id"],
                 "name": conference["name"],
@@ -386,8 +580,11 @@ def update_conference(
                 "next_deadline": next(
                     (item for item in deadlines if item["status"] == "upcoming"), None
                 ),
+                "submission_sites": submission_sites,
                 "tpc_nomination": nomination,
                 "tpc_sources_checked": checked_tpc_urls,
+                "aec_nomination": aec_nomination,
+                "aec_sources_checked": checked_aec_urls,
             }
         except (HTTPError, URLError, TimeoutError, ValueError, OSError) as error:
             errors.append(f"{url}: {type(error).__name__}")
@@ -396,6 +593,16 @@ def update_conference(
         retained = dict(previous)
         retained["source_status"] = "error"
         retained["source_error"] = "; ".join(errors)[:500]
+        retained.setdefault("submission_sites", [])
+        retained.setdefault(
+            "aec_nomination",
+            {
+                "status": "unknown",
+                "url": retained.get("source_url", ""),
+                "label": "The official AEC source could not be checked.",
+            },
+        )
+        retained.setdefault("aec_sources_checked", [])
         return retained
 
     return {
@@ -408,12 +615,19 @@ def update_conference(
         "source_error": "; ".join(errors)[:500],
         "deadlines": [],
         "next_deadline": None,
+        "submission_sites": [],
         "tpc_nomination": {
             "status": "unknown",
             "url": candidate_urls(conference, today)[-1],
             "label": "The official source could not be checked.",
         },
         "tpc_sources_checked": [],
+        "aec_nomination": {
+            "status": "unknown",
+            "url": candidate_urls(conference, today)[-1],
+            "label": "The official AEC source could not be checked.",
+        },
+        "aec_sources_checked": [],
     }
 
 
@@ -429,10 +643,11 @@ def load_previous() -> dict[str, dict[str, object]]:
 
 def build_payload(today: date) -> dict[str, object]:
     previous = load_previous()
-    conferences = [
-        update_conference(item, today, previous.get(str(item["id"])))
-        for item in CONFERENCES
-    ]
+    def update(item: dict[str, object]) -> dict[str, object]:
+        return update_conference(item, today, previous.get(str(item["id"])))
+
+    with ThreadPoolExecutor(max_workers=len(CONFERENCES)) as executor:
+        conferences = list(executor.map(update, CONFERENCES))
     upcoming = sum(
         1
         for conference in conferences
@@ -444,6 +659,11 @@ def build_payload(today: date) -> dict[str, object]:
         for conference in conferences
         if conference["tpc_nomination"]["status"] == "found"
     )
+    aec_nominations = sum(
+        1
+        for conference in conferences
+        if conference["aec_nomination"]["status"] == "found"
+    )
     return {
         "last_checked": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
         "monitor_date": today.isoformat(),
@@ -451,6 +671,7 @@ def build_payload(today: date) -> dict[str, object]:
             "conferences": len(conferences),
             "upcoming_deadlines": upcoming,
             "tpc_nominations": nominations,
+            "aec_nominations": aec_nominations,
         },
         "conferences": conferences,
     }
@@ -470,7 +691,8 @@ def main() -> int:
     print(
         f"Checked {len(payload['conferences'])} conferences; "
         f"{payload['summary']['upcoming_deadlines']} upcoming deadlines; "
-        f"{payload['summary']['tpc_nominations']} TPC nomination pages."
+        f"{payload['summary']['tpc_nominations']} TPC nomination pages; "
+        f"{payload['summary']['aec_nominations']} AEC nomination pages."
     )
     if failures:
         print("Sources unavailable: " + ", ".join(failures), file=sys.stderr)

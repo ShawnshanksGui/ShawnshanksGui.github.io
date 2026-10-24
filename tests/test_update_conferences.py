@@ -64,6 +64,66 @@ class ConferenceMonitorTests(unittest.TestCase):
         )
         self.assertEqual(result["status"], "found")
 
+    def test_extract_submission_sites_excludes_artifact_hotcrp(self):
+        sites = monitor.extract_submission_sites(
+            [],
+            [
+                {
+                    "text": "Fall submission",
+                    "url": "https://conf27-fall.hotcrp.com/",
+                },
+                {
+                    "text": "Artifact submission",
+                    "url": "https://conf27-ae.hotcrp.com/",
+                },
+                {
+                    "text": "HotCRP AE Submission Site",
+                    "url": "https://conf27ae.hotcrp.com/",
+                },
+            ],
+        )
+        self.assertEqual(
+            sites,
+            [
+                {
+                    "label": "Fall submission",
+                    "url": "https://conf27-fall.hotcrp.com/",
+                }
+            ],
+        )
+
+    def test_extract_aec_nomination_requires_role_and_application(self):
+        found = monitor.extract_aec_nomination(
+            [
+                "Interested in Reviewing Artifacts?",
+                "Join the Artifact Evaluation Committee",
+                "Apply now",
+            ],
+            [
+                {
+                    "text": "self-nomination form",
+                    "url": "https://forms.gle/example",
+                }
+            ],
+            "https://example.org/aec",
+        )
+        authors_only = monitor.extract_aec_nomination(
+            ["Artifact submission instructions", "The AEC will review artifacts"],
+            [],
+            "https://example.org/artifacts",
+        )
+        self.assertEqual(found["status"], "found")
+        self.assertEqual(found["url"], "https://forms.gle/example")
+        self.assertEqual(authors_only["status"], "not_found")
+
+    def test_aec_navigation_without_application_form_is_not_found(self):
+        result = monitor.extract_aec_nomination(
+            ["Artifact Evaluation Committee", "Call for Evaluators"],
+            [{"text": "Committee", "url": "https://example.org/aec-committee"}],
+            "https://example.org/cfp",
+        )
+        self.assertEqual(result["status"], "not_found")
+
     def test_related_tpc_urls_stay_on_official_host(self):
         links = [
             {"text": "Program Committee", "url": "https://conf.example.org/committee/"},

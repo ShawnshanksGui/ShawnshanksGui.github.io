@@ -7,12 +7,12 @@ author_profile: true
 
 {% assign monitor = site.data.conference_deadlines %}
 
-<div class="deadline-monitor">
+<div class="deadline-monitor" data-view="all">
   <header class="deadline-monitor__header">
     <p class="deadline-monitor__eyebrow">Daily official-source monitor</p>
     <p class="deadline-monitor__intro">
-      Submission deadlines and TPC self-nomination notices for major computer systems conferences.
-      Every entry links to the official conference source.
+      Submission deadlines, HotCRP sites, and TPC/AEC self-nomination notices for major systems conferences.
+      Every entry is traced to an official source.
     </p>
     {% if monitor %}
     <p class="deadline-monitor__checked">
@@ -36,12 +36,17 @@ author_profile: true
       <strong>{{ monitor.summary.tpc_nominations }}</strong>
       <span>TPC calls found</span>
     </div>
+    <div class="deadline-summary__item">
+      <strong>{{ monitor.summary.aec_nominations }}</strong>
+      <span>AEC calls found</span>
+    </div>
   </section>
 
   <div class="deadline-toolbar" aria-label="Filter conferences">
     <button class="deadline-filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
     <button class="deadline-filter" type="button" data-filter="upcoming" aria-pressed="false">Upcoming</button>
-    <button class="deadline-filter" type="button" data-filter="tpc" aria-pressed="false">TPC calls</button>
+    <button class="deadline-filter" type="button" data-filter="tpc" aria-pressed="false">TPC self-nomination</button>
+    <button class="deadline-filter" type="button" data-filter="aec" aria-pressed="false">AEC TPC self-nomination</button>
   </div>
 
   <div class="deadline-grid">
@@ -56,6 +61,7 @@ author_profile: true
         class="deadline-card"
         data-upcoming="{{ has_upcoming }}"
         data-tpc="{{ conference.tpc_nomination.status }}"
+        data-aec="{{ conference.aec_nomination.status }}"
       >
         <div class="deadline-card__heading">
           <div>
@@ -75,7 +81,7 @@ author_profile: true
           {% endif %}
         </div>
 
-        <div class="deadline-card__section">
+        <div class="deadline-card__section deadline-card__section--submission">
           <h3><i class="fas fa-calendar-alt" aria-hidden="true"></i> Submission deadlines</h3>
           {% if conference.deadlines.size > 0 %}
             <ol class="deadline-list">
@@ -96,6 +102,22 @@ author_profile: true
           {% else %}
             <p class="deadline-card__empty">The next submission deadline has not been announced on the official source.</p>
           {% endif %}
+
+          <div class="conference-links">
+            <a href="{{ conference.source_url }}" target="_blank" rel="noopener">
+              <i class="fas fa-file-alt" aria-hidden="true"></i>
+              Official CFP
+            </a>
+            {% for site in conference.submission_sites %}
+              <a href="{{ site.url }}" target="_blank" rel="noopener">
+                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                HotCRP{% if conference.submission_sites.size > 1 %}: {{ site.label }}{% endif %}
+              </a>
+            {% endfor %}
+            {% if conference.submission_sites.size == 0 %}
+              <span class="conference-links__missing">HotCRP not announced</span>
+            {% endif %}
+          </div>
         </div>
 
         <div class="deadline-card__section deadline-card__section--tpc">
@@ -112,10 +134,19 @@ author_profile: true
           {% endif %}
         </div>
 
-        <a class="deadline-card__source" href="{{ conference.source_url }}" target="_blank" rel="noopener">
-          View official source
-          <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-        </a>
+        <div class="deadline-card__section deadline-card__section--aec">
+          <h3><i class="fas fa-box-open" aria-hidden="true"></i> AEC TPC self-nomination</h3>
+          {% if conference.aec_nomination.status == "found" %}
+            <a class="tpc-link" href="{{ conference.aec_nomination.url }}" target="_blank" rel="noopener">
+              {{ conference.aec_nomination.label }}
+              <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+            </a>
+          {% elsif conference.aec_nomination.status == "unknown" %}
+            <p class="tpc-state tpc-state--unknown">Official AEC source unavailable during the latest check.</p>
+          {% else %}
+            <p class="tpc-state">Not found on the monitored official AEC page.</p>
+          {% endif %}
+        </div>
       </article>
     {% endfor %}
   </div>
@@ -126,8 +157,8 @@ author_profile: true
     <h2>Monitoring policy</h2>
     <p>
       The monitor checks official conference and society pages once per day. “Not found” means that no explicit
-      TPC self-nomination notice was detected on the monitored official page; it does not imply that the conference
-      never accepts nominations. Always verify time zones and last-minute changes at the linked source.
+      TPC or AEC self-nomination notice was detected on the monitored official pages; it does not imply that a
+      committee never accepts nominations. Always verify time zones and last-minute changes at the linked source.
     </p>
   </aside>
   {% else %}
@@ -140,11 +171,13 @@ author_profile: true
     var buttons = document.querySelectorAll(".deadline-filter");
     var cards = document.querySelectorAll(".deadline-card");
     var emptyState = document.querySelector(".deadline-no-results");
+    var monitor = document.querySelector(".deadline-monitor");
 
     buttons.forEach(function (button) {
       button.addEventListener("click", function () {
         var filter = button.getAttribute("data-filter");
         var visible = 0;
+        if (monitor) monitor.setAttribute("data-view", filter);
 
         buttons.forEach(function (item) {
           var active = item === button;
@@ -155,8 +188,9 @@ author_profile: true
         cards.forEach(function (card) {
           var show =
             filter === "all" ||
-            (filter === "upcoming" && card.getAttribute("data-upcoming") === "true") ||
-            (filter === "tpc" && card.getAttribute("data-tpc") === "found");
+            filter === "tpc" ||
+            filter === "aec" ||
+            (filter === "upcoming" && card.getAttribute("data-upcoming") === "true");
           card.hidden = !show;
           if (show) visible += 1;
         });
