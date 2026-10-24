@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-10-24T10:46:53+00:00",
+  "last_checked": "2026-10-24T10:55:31+00:00",
   "monitor_date": "2026-10-24",
   "summary": {
     "conferences": 8,
@@ -122,7 +122,8 @@
         "label": "No AEC self-nomination information found on the monitored official page."
       },
       "aec_sources_checked": [
-        "https://www.usenix.org/conference/nsdi27/call-for-papers"
+        "https://www.usenix.org/conference/nsdi27/call-for-papers",
+        "https://www.usenix.org/conference/nsdi27/call-for-artifacts"
       ]
     },
     {
@@ -233,7 +234,8 @@
         "label": "No AEC self-nomination information found on the monitored official page."
       },
       "aec_sources_checked": [
-        "https://www.usenix.org/conferences/byname/131"
+        "https://www.usenix.org/conferences/byname/131",
+        "https://www.usenix.org/conference/atc25/call-for-artifacts"
       ]
     },
     {
