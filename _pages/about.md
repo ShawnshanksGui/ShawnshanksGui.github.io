@@ -11,7 +11,7 @@ redirect_from:
 I am currently an Assistant Researcher at Zhongguancun Laboratory, working closely with [Dr. Kaihui Gao](https://gaokaihui.com/) and [Prof. Li Chen](https://li-ch.github.io/resume/).
 I received my Ph.D. degree with high honors from Tsinghua University in 2025, where I was fortunate to be advised by [Prof. Dan Li](https://nasp.cs.tsinghua.edu.cn/lidan.html). 
 
-My research interests lie primarily in networking systems. Currently, I am focusing on building simulators for LLM training and inference systems. I have published several papers in top-tier computer networking venues, including USENIX NSDI and ACM SIGCOMM.
+My research interests lie primarily in network simulation, AI infra and AI for networking. I have published several papers in top-tier computer networking venues, including USENIX NSDI and ACM SIGCOMM.
 <!-- 
 Previously, I received my B.S. in Automation and M.S. in Computer Science, respectively, from Xiangtan University, where I was fortunate to be advised by [Prof. Zhetao Li](https://faculty.jnu.edu.cn/xxkxjsxy/lzt3/list.htm).
  -->
