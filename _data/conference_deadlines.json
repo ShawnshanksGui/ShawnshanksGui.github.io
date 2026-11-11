@@ -1,6 +1,6 @@
 {
-  "last_checked": "2026-11-10T08:23:54+00:00",
-  "monitor_date": "2026-11-10",
+  "last_checked": "2026-11-11T07:43:51+00:00",
+  "monitor_date": "2026-11-11",
   "summary": {
     "conferences": 8,
     "upcoming_deadlines": 5,
@@ -20,7 +20,7 @@
           "label": "Main Conference Paper Submission",
           "date": "2027-02-02",
           "display_date": "Tuesday, February 2, 2027",
-          "days_remaining": 84,
+          "days_remaining": 83,
           "status": "upcoming",
           "source_url": "https://conferences.sigcomm.org/sigcomm/2027/"
         }
@@ -29,7 +29,7 @@
         "label": "Main Conference Paper Submission",
         "date": "2027-02-02",
         "display_date": "Tuesday, February 2, 2027",
-        "days_remaining": 84,
+        "days_remaining": 83,
         "status": "upcoming",
         "source_url": "https://conferences.sigcomm.org/sigcomm/2027/"
       },
@@ -68,7 +68,7 @@
           "label": "Paper titles and abstracts",
           "date": "2026-04-16",
           "display_date": "Thursday, April 16, 2026",
-          "days_remaining": -208,
+          "days_remaining": -209,
           "status": "passed",
           "source_url": "https://www.usenix.org/conference/nsdi27/call-for-papers"
         },
@@ -76,7 +76,7 @@
           "label": "Full paper submissions",
           "date": "2026-04-23",
           "display_date": "Thursday, April 23, 2026",
-          "days_remaining": -201,
+          "days_remaining": -202,
           "status": "passed",
           "source_url": "https://www.usenix.org/conference/nsdi27/call-for-papers"
         },
@@ -84,7 +84,7 @@
           "label": "Paper titles and abstracts",
           "date": "2026-09-10",
           "display_date": "Thursday, September 10, 2026",
-          "days_remaining": -61,
+          "days_remaining": -62,
           "status": "passed",
           "source_url": "https://www.usenix.org/conference/nsdi27/call-for-papers"
         },
@@ -92,7 +92,7 @@
           "label": "Full paper submissions",
           "date": "2026-09-17",
           "display_date": "Thursday, September 17, 2026",
-          "days_remaining": -54,
+          "days_remaining": -55,
           "status": "passed",
           "source_url": "https://www.usenix.org/conference/nsdi27/call-for-papers"
         }
@@ -138,7 +138,7 @@
           "label": "Abstract registrations",
           "date": "2026-12-01",
           "display_date": "Tuesday, December 1, 2026",
-          "days_remaining": 21,
+          "days_remaining": 20,
           "status": "upcoming",
           "source_url": "https://www.usenix.org/conference/osdi27/call-for-papers"
         },
@@ -146,7 +146,7 @@
           "label": "Complete paper submissions",
           "date": "2026-12-08",
           "display_date": "Tuesday, December 8, 2026",
-          "days_remaining": 28,
+          "days_remaining": 27,
           "status": "upcoming",
           "source_url": "https://www.usenix.org/conference/osdi27/call-for-papers"
         }
@@ -155,7 +155,7 @@
         "label": "Abstract registrations",
         "date": "2026-12-01",
         "display_date": "Tuesday, December 1, 2026",
-        "days_remaining": 21,
+        "days_remaining": 20,
         "status": "upcoming",
         "source_url": "https://www.usenix.org/conference/osdi27/call-for-papers"
       },
@@ -227,7 +227,7 @@
           "label": "Submission deadline",
           "date": "2026-06-10",
           "display_date": "June 10, 2026",
-          "days_remaining": -153,
+          "days_remaining": -154,
           "status": "passed",
           "source_url": "https://atc.sigops.org/2026/cfp.html"
         }
@@ -269,7 +269,7 @@
           "label": "Paper titles and abstracts",
           "date": "2026-05-07",
           "display_date": "Thursday, May 7, 2026",
-          "days_remaining": -187,
+          "days_remaining": -188,
           "status": "passed",
           "source_url": "https://2027.eurosys.org/cfp.html"
         },
@@ -277,7 +277,7 @@
           "label": "Full paper submissions",
           "date": "2026-05-14",
           "display_date": "Thursday, May 14, 2026",
-          "days_remaining": -180,
+          "days_remaining": -181,
           "status": "passed",
           "source_url": "https://2027.eurosys.org/cfp.html"
         },
@@ -285,7 +285,7 @@
           "label": "Paper titles and abstracts",
           "date": "2026-09-17",
           "display_date": "Thursday, September 17, 2026",
-          "days_remaining": -54,
+          "days_remaining": -55,
           "status": "passed",
           "source_url": "https://2027.eurosys.org/cfp.html"
         },
@@ -293,7 +293,7 @@
           "label": "Full paper submissions",
           "date": "2026-09-24",
           "display_date": "Thursday, September 24, 2026",
-          "days_remaining": -47,
+          "days_remaining": -48,
           "status": "passed",
           "source_url": "https://2027.eurosys.org/cfp.html"
         }
@@ -340,7 +340,7 @@
           "label": "Full paper submission",
           "date": "2026-04-15",
           "display_date": "April 15, 2026",
-          "days_remaining": -209,
+          "days_remaining": -210,
           "status": "passed",
           "source_url": "https://www.asplos-conference.org/asplos2027/cfp/"
         },
@@ -348,7 +348,7 @@
           "label": "Full paper submission",
           "date": "2026-09-09",
           "display_date": "September 9, 2026",
-          "days_remaining": -62,
+          "days_remaining": -63,
           "status": "passed",
           "source_url": "https://www.asplos-conference.org/asplos2027/cfp/"
         }
@@ -391,7 +391,7 @@
           "label": "Paper Submission",
           "date": "2026-12-04",
           "display_date": "December 4, 2026",
-          "days_remaining": 24,
+          "days_remaining": 23,
           "status": "upcoming",
           "source_url": "https://conferences.sigcomm.org/co-next/2027/#!/cfp"
         },
@@ -399,7 +399,7 @@
           "label": "Paper Submission",
           "date": "2027-06-04",
           "display_date": "June 4, 2027",
-          "days_remaining": 206,
+          "days_remaining": 205,
           "status": "upcoming",
           "source_url": "https://conferences.sigcomm.org/co-next/2027/#!/cfp"
         }
@@ -408,7 +408,7 @@
         "label": "Paper Submission",
         "date": "2026-12-04",
         "display_date": "December 4, 2026",
-        "days_remaining": 24,
+        "days_remaining": 23,
         "status": "upcoming",
         "source_url": "https://conferences.sigcomm.org/co-next/2027/#!/cfp"
       },
