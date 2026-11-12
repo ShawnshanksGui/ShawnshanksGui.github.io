@@ -22,6 +22,8 @@ Previously, I received my B.S. in Automation and M.S. in Computer Science, respe
 <!-- <h1><strong><span style="color:blue">What's New</span></strong></h1> -->
 <h1><strong>What's New</strong></h1>
 <!-- <h1><strong><span style="color:#1E90FF">What's New</span></strong></h1> -->
+
+* [2026-11].  TPC member for **CoNEXT 2027**.
 * [2026-06].  PReCCL accepted to **SIGCOMM 2026**. Congratulations to Zhiyong Chen.
 * [2026-05].  TPC member for INFOCOM 2027 and ICNP 2026.
 * [2025-12].  TPC member for **SIGCOMM 2026**.
@@ -70,7 +72,7 @@ Fei Long, Kaihui Gao\*, Li Chen\*, Dan Li, Yiwei Zhang, <u>Fei Gui</u>, Yitao Xi
 <br>
 
 <h1><strong>Services</strong></h1>
-* TPC member: **ACM SIGCOMM 2026**, **IEEE ICNP 2026**, **IEEE INFOCOM 2027**.
+* TPC member: **ACM SIGCOMM 2026**, **ACM CoNEXT 2027**, **IEEE ICNP 2026**, **IEEE INFOCOM 2027**.
 <!-- * Shadow TPC member: **ACM EuroSys 2026, ACM CoNEXT 2025**. -->
 * Artifact Evaluation TPC member: **USENIX NSDI 2026**, **ACM ASPLOS 2026**, **ACM SOSP 2025**.
 * Reviewer: **IEEE TMC 2024**, **IEEE JSAC 2026**.
